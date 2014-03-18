@@ -1,0 +1,485 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		71330D7E18D7D73F00AAE6C3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71330D7D18D7D73F00AAE6C3 /* Foundation.framework */; };
+		71330D8018D7D74000AAE6C3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71330D7F18D7D74000AAE6C3 /* CoreGraphics.framework */; };
+		71330D8218D7D74000AAE6C3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71330D8118D7D74000AAE6C3 /* UIKit.framework */; };
+		71330D8818D7D74000AAE6C3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 71330D8618D7D74000AAE6C3 /* InfoPlist.strings */; };
+		71330D8A18D7D74000AAE6C3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 71330D8918D7D74000AAE6C3 /* main.m */; };
+		71330D8E18D7D74000AAE6C3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 71330D8D18D7D74000AAE6C3 /* AppDelegate.m */; };
+		71330D9118D7D74000AAE6C3 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71330D8F18D7D74000AAE6C3 /* Main_iPhone.storyboard */; };
+		71330D9418D7D74000AAE6C3 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71330D9218D7D74000AAE6C3 /* Main_iPad.storyboard */; };
+		71330D9718D7D74000AAE6C3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71330D9618D7D74000AAE6C3 /* ViewController.m */; };
+		71330D9918D7D74000AAE6C3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71330D9818D7D74000AAE6C3 /* Images.xcassets */; };
+		71330DA018D7D74000AAE6C3 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71330D9F18D7D74000AAE6C3 /* XCTest.framework */; };
+		71330DA118D7D74000AAE6C3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71330D7D18D7D73F00AAE6C3 /* Foundation.framework */; };
+		71330DA218D7D74000AAE6C3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71330D8118D7D74000AAE6C3 /* UIKit.framework */; };
+		71330DAA18D7D74000AAE6C3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 71330DA818D7D74000AAE6C3 /* InfoPlist.strings */; };
+		71330DAC18D7D74000AAE6C3 /* ProjectKaraokeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 71330DAB18D7D74000AAE6C3 /* ProjectKaraokeTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		71330DA318D7D74000AAE6C3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 71330D7218D7D73F00AAE6C3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 71330D7918D7D73F00AAE6C3;
+			remoteInfo = ProjectKaraoke;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		71330D7A18D7D73F00AAE6C3 /* ProjectKaraoke.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectKaraoke.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		71330D7D18D7D73F00AAE6C3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		71330D7F18D7D74000AAE6C3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		71330D8118D7D74000AAE6C3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		71330D8518D7D74000AAE6C3 /* ProjectKaraoke-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ProjectKaraoke-Info.plist"; sourceTree = "<group>"; };
+		71330D8718D7D74000AAE6C3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		71330D8918D7D74000AAE6C3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		71330D8B18D7D74000AAE6C3 /* ProjectKaraoke-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ProjectKaraoke-Prefix.pch"; sourceTree = "<group>"; };
+		71330D8C18D7D74000AAE6C3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		71330D8D18D7D74000AAE6C3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		71330D9018D7D74000AAE6C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		71330D9318D7D74000AAE6C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		71330D9518D7D74000AAE6C3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		71330D9618D7D74000AAE6C3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		71330D9818D7D74000AAE6C3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		71330D9E18D7D74000AAE6C3 /* ProjectKaraokeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProjectKaraokeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		71330D9F18D7D74000AAE6C3 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		71330DA718D7D74000AAE6C3 /* ProjectKaraokeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ProjectKaraokeTests-Info.plist"; sourceTree = "<group>"; };
+		71330DA918D7D74000AAE6C3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		71330DAB18D7D74000AAE6C3 /* ProjectKaraokeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProjectKaraokeTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		71330D7718D7D73F00AAE6C3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71330D8018D7D74000AAE6C3 /* CoreGraphics.framework in Frameworks */,
+				71330D8218D7D74000AAE6C3 /* UIKit.framework in Frameworks */,
+				71330D7E18D7D73F00AAE6C3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		71330D9B18D7D74000AAE6C3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71330DA018D7D74000AAE6C3 /* XCTest.framework in Frameworks */,
+				71330DA218D7D74000AAE6C3 /* UIKit.framework in Frameworks */,
+				71330DA118D7D74000AAE6C3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		71330D7118D7D73F00AAE6C3 = {
+			isa = PBXGroup;
+			children = (
+				71330D8318D7D74000AAE6C3 /* ProjectKaraoke */,
+				71330DA518D7D74000AAE6C3 /* ProjectKaraokeTests */,
+				71330D7C18D7D73F00AAE6C3 /* Frameworks */,
+				71330D7B18D7D73F00AAE6C3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		71330D7B18D7D73F00AAE6C3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				71330D7A18D7D73F00AAE6C3 /* ProjectKaraoke.app */,
+				71330D9E18D7D74000AAE6C3 /* ProjectKaraokeTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		71330D7C18D7D73F00AAE6C3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				71330D7D18D7D73F00AAE6C3 /* Foundation.framework */,
+				71330D7F18D7D74000AAE6C3 /* CoreGraphics.framework */,
+				71330D8118D7D74000AAE6C3 /* UIKit.framework */,
+				71330D9F18D7D74000AAE6C3 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		71330D8318D7D74000AAE6C3 /* ProjectKaraoke */ = {
+			isa = PBXGroup;
+			children = (
+				71330D8C18D7D74000AAE6C3 /* AppDelegate.h */,
+				71330D8D18D7D74000AAE6C3 /* AppDelegate.m */,
+				71330D8F18D7D74000AAE6C3 /* Main_iPhone.storyboard */,
+				71330D9218D7D74000AAE6C3 /* Main_iPad.storyboard */,
+				71330D9518D7D74000AAE6C3 /* ViewController.h */,
+				71330D9618D7D74000AAE6C3 /* ViewController.m */,
+				71330D9818D7D74000AAE6C3 /* Images.xcassets */,
+				71330D8418D7D74000AAE6C3 /* Supporting Files */,
+			);
+			path = ProjectKaraoke;
+			sourceTree = "<group>";
+		};
+		71330D8418D7D74000AAE6C3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				71330D8518D7D74000AAE6C3 /* ProjectKaraoke-Info.plist */,
+				71330D8618D7D74000AAE6C3 /* InfoPlist.strings */,
+				71330D8918D7D74000AAE6C3 /* main.m */,
+				71330D8B18D7D74000AAE6C3 /* ProjectKaraoke-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		71330DA518D7D74000AAE6C3 /* ProjectKaraokeTests */ = {
+			isa = PBXGroup;
+			children = (
+				71330DAB18D7D74000AAE6C3 /* ProjectKaraokeTests.m */,
+				71330DA618D7D74000AAE6C3 /* Supporting Files */,
+			);
+			path = ProjectKaraokeTests;
+			sourceTree = "<group>";
+		};
+		71330DA618D7D74000AAE6C3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				71330DA718D7D74000AAE6C3 /* ProjectKaraokeTests-Info.plist */,
+				71330DA818D7D74000AAE6C3 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		71330D7918D7D73F00AAE6C3 /* ProjectKaraoke */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 71330DAF18D7D74000AAE6C3 /* Build configuration list for PBXNativeTarget "ProjectKaraoke" */;
+			buildPhases = (
+				71330D7618D7D73F00AAE6C3 /* Sources */,
+				71330D7718D7D73F00AAE6C3 /* Frameworks */,
+				71330D7818D7D73F00AAE6C3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ProjectKaraoke;
+			productName = ProjectKaraoke;
+			productReference = 71330D7A18D7D73F00AAE6C3 /* ProjectKaraoke.app */;
+			productType = "com.apple.product-type.application";
+		};
+		71330D9D18D7D74000AAE6C3 /* ProjectKaraokeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 71330DB218D7D74000AAE6C3 /* Build configuration list for PBXNativeTarget "ProjectKaraokeTests" */;
+			buildPhases = (
+				71330D9A18D7D74000AAE6C3 /* Sources */,
+				71330D9B18D7D74000AAE6C3 /* Frameworks */,
+				71330D9C18D7D74000AAE6C3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				71330DA418D7D74000AAE6C3 /* PBXTargetDependency */,
+			);
+			name = ProjectKaraokeTests;
+			productName = ProjectKaraokeTests;
+			productReference = 71330D9E18D7D74000AAE6C3 /* ProjectKaraokeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		71330D7218D7D73F00AAE6C3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = LanceFu;
+				TargetAttributes = {
+					71330D9D18D7D74000AAE6C3 = {
+						TestTargetID = 71330D7918D7D73F00AAE6C3;
+					};
+				};
+			};
+			buildConfigurationList = 71330D7518D7D73F00AAE6C3 /* Build configuration list for PBXProject "ProjectKaraoke" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 71330D7118D7D73F00AAE6C3;
+			productRefGroup = 71330D7B18D7D73F00AAE6C3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				71330D7918D7D73F00AAE6C3 /* ProjectKaraoke */,
+				71330D9D18D7D74000AAE6C3 /* ProjectKaraokeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		71330D7818D7D73F00AAE6C3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71330D9418D7D74000AAE6C3 /* Main_iPad.storyboard in Resources */,
+				71330D9918D7D74000AAE6C3 /* Images.xcassets in Resources */,
+				71330D9118D7D74000AAE6C3 /* Main_iPhone.storyboard in Resources */,
+				71330D8818D7D74000AAE6C3 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		71330D9C18D7D74000AAE6C3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71330DAA18D7D74000AAE6C3 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		71330D7618D7D73F00AAE6C3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71330D9718D7D74000AAE6C3 /* ViewController.m in Sources */,
+				71330D8E18D7D74000AAE6C3 /* AppDelegate.m in Sources */,
+				71330D8A18D7D74000AAE6C3 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		71330D9A18D7D74000AAE6C3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71330DAC18D7D74000AAE6C3 /* ProjectKaraokeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		71330DA418D7D74000AAE6C3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 71330D7918D7D73F00AAE6C3 /* ProjectKaraoke */;
+			targetProxy = 71330DA318D7D74000AAE6C3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		71330D8618D7D74000AAE6C3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				71330D8718D7D74000AAE6C3 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		71330D8F18D7D74000AAE6C3 /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				71330D9018D7D74000AAE6C3 /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		71330D9218D7D74000AAE6C3 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				71330D9318D7D74000AAE6C3 /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		71330DA818D7D74000AAE6C3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				71330DA918D7D74000AAE6C3 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		71330DAD18D7D74000AAE6C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		71330DAE18D7D74000AAE6C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		71330DB018D7D74000AAE6C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ProjectKaraoke/ProjectKaraoke-Prefix.pch";
+				INFOPLIST_FILE = "ProjectKaraoke/ProjectKaraoke-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		71330DB118D7D74000AAE6C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ProjectKaraoke/ProjectKaraoke-Prefix.pch";
+				INFOPLIST_FILE = "ProjectKaraoke/ProjectKaraoke-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		71330DB318D7D74000AAE6C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ProjectKaraoke.app/ProjectKaraoke";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ProjectKaraoke/ProjectKaraoke-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "ProjectKaraokeTests/ProjectKaraokeTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		71330DB418D7D74000AAE6C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ProjectKaraoke.app/ProjectKaraoke";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ProjectKaraoke/ProjectKaraoke-Prefix.pch";
+				INFOPLIST_FILE = "ProjectKaraokeTests/ProjectKaraokeTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		71330D7518D7D73F00AAE6C3 /* Build configuration list for PBXProject "ProjectKaraoke" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				71330DAD18D7D74000AAE6C3 /* Debug */,
+				71330DAE18D7D74000AAE6C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		71330DAF18D7D74000AAE6C3 /* Build configuration list for PBXNativeTarget "ProjectKaraoke" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				71330DB018D7D74000AAE6C3 /* Debug */,
+				71330DB118D7D74000AAE6C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		71330DB218D7D74000AAE6C3 /* Build configuration list for PBXNativeTarget "ProjectKaraokeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				71330DB318D7D74000AAE6C3 /* Debug */,
+				71330DB418D7D74000AAE6C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 71330D7218D7D73F00AAE6C3 /* Project object */;
+}
