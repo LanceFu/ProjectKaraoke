@@ -22,6 +22,9 @@
 		71330DA218D7D74000AAE6C3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71330D8118D7D74000AAE6C3 /* UIKit.framework */; };
 		71330DAA18D7D74000AAE6C3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 71330DA818D7D74000AAE6C3 /* InfoPlist.strings */; };
 		71330DAC18D7D74000AAE6C3 /* ProjectKaraokeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 71330DAB18D7D74000AAE6C3 /* ProjectKaraokeTests.m */; };
+		71330E5218D7DBA000AAE6C3 /* libTheAmazingAudioEngine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 71330E4F18D7DB7100AAE6C3 /* libTheAmazingAudioEngine.a */; };
+		71330E5418D7DBAC00AAE6C3 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71330E5318D7DBAC00AAE6C3 /* AudioToolbox.framework */; };
+		71330E5618D7DBB500AAE6C3 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71330E5518D7DBB500AAE6C3 /* Accelerate.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +34,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = 71330D7918D7D73F00AAE6C3;
 			remoteInfo = ProjectKaraoke;
+		};
+		71330E4E18D7DB7100AAE6C3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 71330E4A18D7DB7100AAE6C3 /* TheAmazingAudioEngine.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4C215CEC1523A7D500D36CAD;
+			remoteInfo = TheAmazingAudioEngine;
+		};
+		71330E5018D7DB9300AAE6C3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 71330E4A18D7DB7100AAE6C3 /* TheAmazingAudioEngine.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 4C215CEB1523A7D500D36CAD;
+			remoteInfo = TheAmazingAudioEngine;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -55,6 +72,9 @@
 		71330DA718D7D74000AAE6C3 /* ProjectKaraokeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ProjectKaraokeTests-Info.plist"; sourceTree = "<group>"; };
 		71330DA918D7D74000AAE6C3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		71330DAB18D7D74000AAE6C3 /* ProjectKaraokeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProjectKaraokeTests.m; sourceTree = "<group>"; };
+		71330E4A18D7DB7100AAE6C3 /* TheAmazingAudioEngine.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TheAmazingAudioEngine.xcodeproj; path = Library/TheAmazingAudioEngine/TheAmazingAudioEngine.xcodeproj; sourceTree = "<group>"; };
+		71330E5318D7DBAC00AAE6C3 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		71330E5518D7DBB500AAE6C3 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +82,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71330E5618D7DBB500AAE6C3 /* Accelerate.framework in Frameworks */,
+				71330E5418D7DBAC00AAE6C3 /* AudioToolbox.framework in Frameworks */,
+				71330E5218D7DBA000AAE6C3 /* libTheAmazingAudioEngine.a in Frameworks */,
 				71330D8018D7D74000AAE6C3 /* CoreGraphics.framework in Frameworks */,
 				71330D8218D7D74000AAE6C3 /* UIKit.framework in Frameworks */,
 				71330D7E18D7D73F00AAE6C3 /* Foundation.framework in Frameworks */,
@@ -88,6 +111,7 @@
 				71330DA518D7D74000AAE6C3 /* ProjectKaraokeTests */,
 				71330D7C18D7D73F00AAE6C3 /* Frameworks */,
 				71330D7B18D7D73F00AAE6C3 /* Products */,
+				71330E4A18D7DB7100AAE6C3 /* TheAmazingAudioEngine.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +127,8 @@
 		71330D7C18D7D73F00AAE6C3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				71330E5518D7DBB500AAE6C3 /* Accelerate.framework */,
+				71330E5318D7DBAC00AAE6C3 /* AudioToolbox.framework */,
 				71330D7D18D7D73F00AAE6C3 /* Foundation.framework */,
 				71330D7F18D7D74000AAE6C3 /* CoreGraphics.framework */,
 				71330D8118D7D74000AAE6C3 /* UIKit.framework */,
@@ -155,6 +181,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		71330E4B18D7DB7100AAE6C3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				71330E4F18D7DB7100AAE6C3 /* libTheAmazingAudioEngine.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -169,6 +203,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				71330E5118D7DB9300AAE6C3 /* PBXTargetDependency */,
 			);
 			name = ProjectKaraoke;
 			productName = ProjectKaraoke;
@@ -218,6 +253,12 @@
 			mainGroup = 71330D7118D7D73F00AAE6C3;
 			productRefGroup = 71330D7B18D7D73F00AAE6C3 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 71330E4B18D7DB7100AAE6C3 /* Products */;
+					ProjectRef = 71330E4A18D7DB7100AAE6C3 /* TheAmazingAudioEngine.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				71330D7918D7D73F00AAE6C3 /* ProjectKaraoke */,
@@ -225,6 +266,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		71330E4F18D7DB7100AAE6C3 /* libTheAmazingAudioEngine.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libTheAmazingAudioEngine.a;
+			remoteRef = 71330E4E18D7DB7100AAE6C3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		71330D7818D7D73F00AAE6C3 /* Resources */ = {
@@ -274,6 +325,11 @@
 			isa = PBXTargetDependency;
 			target = 71330D7918D7D73F00AAE6C3 /* ProjectKaraoke */;
 			targetProxy = 71330DA318D7D74000AAE6C3 /* PBXContainerItemProxy */;
+		};
+		71330E5118D7DB9300AAE6C3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TheAmazingAudioEngine;
+			targetProxy = 71330E5018D7DB9300AAE6C3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -392,6 +448,11 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ProjectKaraoke/ProjectKaraoke-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					Library/TheAmazingAudioEngine/TheAmazingAudioEngine,
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+				);
 				INFOPLIST_FILE = "ProjectKaraoke/ProjectKaraoke-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -405,6 +466,11 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ProjectKaraoke/ProjectKaraoke-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					Library/TheAmazingAudioEngine/TheAmazingAudioEngine,
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+				);
 				INFOPLIST_FILE = "ProjectKaraoke/ProjectKaraoke-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -470,6 +536,7 @@
 				71330DB118D7D74000AAE6C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		71330DB218D7D74000AAE6C3 /* Build configuration list for PBXNativeTarget "ProjectKaraokeTests" */ = {
 			isa = XCConfigurationList;
@@ -478,6 +545,7 @@
 				71330DB418D7D74000AAE6C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
