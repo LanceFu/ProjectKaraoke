@@ -43,19 +43,36 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="startRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ING-nn-0fr"/>
+                                    <action selector="recordingAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aVf-gk-ySB"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eh5-zc-yIt">
+                                <rect key="frame" x="344" y="547" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="NtM-0p-l9g"/>
+                                    <constraint firstAttribute="width" constant="80" id="Rny-t6-FPb"/>
+                                </constraints>
+                                <state key="normal" image="play_icon.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Acv-SB-Wgk"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Eh5-zc-yIt" firstAttribute="top" secondItem="tBp-RG-wmf" secondAttribute="bottom" constant="20" id="91g-Wp-FtO"/>
                             <constraint firstAttribute="centerX" secondItem="tBp-RG-wmf" secondAttribute="centerX" id="F3K-QG-8Fv"/>
+                            <constraint firstAttribute="centerX" secondItem="Eh5-zc-yIt" secondAttribute="centerX" id="Nrb-y8-oB6"/>
                             <constraint firstAttribute="centerY" secondItem="tBp-RG-wmf" secondAttribute="centerY" id="O8Y-H9-hrA"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Hxs-WL-mAn"/>
                     <connections>
-                        <outlet property="startRecordingButton" destination="tBp-RG-wmf" id="Yj6-xA-Dd5"/>
+                        <outlet property="playButton" destination="Eh5-zc-yIt" id="Wy4-3M-MrB"/>
+                        <outlet property="recordButton" destination="tBp-RG-wmf" id="scJ-US-RaW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -63,6 +80,9 @@
             <point key="canvasLocation" x="820" y="22"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="play_icon.png" width="67" height="67"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
