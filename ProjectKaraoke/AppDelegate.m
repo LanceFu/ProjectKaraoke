@@ -11,6 +11,11 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    // Starts an Apphance session
+	[APHLogger startNewSessionWithApplicationKey:APPHANCE_APP_KEY];
+    // Enables Apphance crash reporting
+    NSSetUncaughtExceptionHandler(&APHUncaughtExceptionHandler);
+    
     self.audioController = [[AEAudioController alloc] initWithAudioDescription:[AEAudioController nonInterleaved16BitStereoAudioDescription] inputEnabled:YES];
     NSError *error = NULL;
     BOOL result = [_audioController start:&error];

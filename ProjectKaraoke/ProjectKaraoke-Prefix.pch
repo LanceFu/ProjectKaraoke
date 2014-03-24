@@ -15,6 +15,7 @@
     #import <Foundation/Foundation.h>
 #endif
 
-
+#import "SharedConstants.h"
+#import <Apphance-Pre-Production/APHLogger.h>
 #import "TheAmazingAudioEngine.h"
 #import "AppDelegate.h"

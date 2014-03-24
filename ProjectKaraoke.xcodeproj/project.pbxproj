@@ -22,7 +22,6 @@
 		71330DA218D7D74000AAE6C3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71330D8118D7D74000AAE6C3 /* UIKit.framework */; };
 		71330DAA18D7D74000AAE6C3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 71330DA818D7D74000AAE6C3 /* InfoPlist.strings */; };
 		71330DAC18D7D74000AAE6C3 /* ProjectKaraokeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 71330DAB18D7D74000AAE6C3 /* ProjectKaraokeTests.m */; };
-		71330E5218D7DBA000AAE6C3 /* libTheAmazingAudioEngine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 71330E4F18D7DB7100AAE6C3 /* libTheAmazingAudioEngine.a */; };
 		71330E5418D7DBAC00AAE6C3 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71330E5318D7DBAC00AAE6C3 /* AudioToolbox.framework */; };
 		71330E5618D7DBB500AAE6C3 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71330E5518D7DBB500AAE6C3 /* Accelerate.framework */; };
 		71BB090D18DD187B00CBA7D8 /* AEExpanderFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 71BB08FC18DD187A00CBA7D8 /* AEExpanderFilter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -41,6 +40,13 @@
 		71BB092C18DD35B400CBA7D8 /* pause_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 71BB092818DD35B400CBA7D8 /* pause_icon@2x.png */; };
 		71BB092D18DD35B400CBA7D8 /* stop_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 71BB092918DD35B400CBA7D8 /* stop_icon.png */; };
 		71BB092E18DD35B400CBA7D8 /* stop_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 71BB092A18DD35B400CBA7D8 /* stop_icon@2x.png */; };
+		71BB093518E0D24200CBA7D8 /* Apphance-Pre-Production.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71BB093418E0D24200CBA7D8 /* Apphance-Pre-Production.framework */; };
+		71BB093618E0D25E00CBA7D8 /* libTheAmazingAudioEngine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 71330E4F18D7DB7100AAE6C3 /* libTheAmazingAudioEngine.a */; };
+		71BB093818E0D26800CBA7D8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71BB093718E0D26800CBA7D8 /* QuartzCore.framework */; };
+		71BB093A18E0D27200CBA7D8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71BB093918E0D27200CBA7D8 /* CoreLocation.framework */; };
+		71BB093C18E0D27B00CBA7D8 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71BB093B18E0D27B00CBA7D8 /* SystemConfiguration.framework */; };
+		71BB093E18E0D28200CBA7D8 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71BB093D18E0D28200CBA7D8 /* Security.framework */; };
+		71BB094018E0D28A00CBA7D8 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71BB093F18E0D28A00CBA7D8 /* AssetsLibrary.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +121,13 @@
 		71BB092818DD35B400CBA7D8 /* pause_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pause_icon@2x.png"; sourceTree = "<group>"; };
 		71BB092918DD35B400CBA7D8 /* stop_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stop_icon.png; sourceTree = "<group>"; };
 		71BB092A18DD35B400CBA7D8 /* stop_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "stop_icon@2x.png"; sourceTree = "<group>"; };
+		71BB093218E0D09200CBA7D8 /* SharedConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SharedConstants.h; sourceTree = "<group>"; };
+		71BB093418E0D24200CBA7D8 /* Apphance-Pre-Production.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "Apphance-Pre-Production.framework"; path = "Library/Apphance-Pre-Production.framework"; sourceTree = "<group>"; };
+		71BB093718E0D26800CBA7D8 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		71BB093918E0D27200CBA7D8 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		71BB093B18E0D27B00CBA7D8 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		71BB093D18E0D28200CBA7D8 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		71BB093F18E0D28A00CBA7D8 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,11 +135,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71BB093618E0D25E00CBA7D8 /* libTheAmazingAudioEngine.a in Frameworks */,
+				71BB094018E0D28A00CBA7D8 /* AssetsLibrary.framework in Frameworks */,
+				71BB093E18E0D28200CBA7D8 /* Security.framework in Frameworks */,
+				71BB093C18E0D27B00CBA7D8 /* SystemConfiguration.framework in Frameworks */,
+				71BB093A18E0D27200CBA7D8 /* CoreLocation.framework in Frameworks */,
+				71BB093818E0D26800CBA7D8 /* QuartzCore.framework in Frameworks */,
 				71330E5618D7DBB500AAE6C3 /* Accelerate.framework in Frameworks */,
 				71330E5418D7DBAC00AAE6C3 /* AudioToolbox.framework in Frameworks */,
-				71330E5218D7DBA000AAE6C3 /* libTheAmazingAudioEngine.a in Frameworks */,
 				71330D8018D7D74000AAE6C3 /* CoreGraphics.framework in Frameworks */,
 				71330D8218D7D74000AAE6C3 /* UIKit.framework in Frameworks */,
+				71BB093518E0D24200CBA7D8 /* Apphance-Pre-Production.framework in Frameworks */,
 				71330D7E18D7D73F00AAE6C3 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -168,6 +187,12 @@
 		71330D7C18D7D73F00AAE6C3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				71BB093F18E0D28A00CBA7D8 /* AssetsLibrary.framework */,
+				71BB093D18E0D28200CBA7D8 /* Security.framework */,
+				71BB093B18E0D27B00CBA7D8 /* SystemConfiguration.framework */,
+				71BB093918E0D27200CBA7D8 /* CoreLocation.framework */,
+				71BB093718E0D26800CBA7D8 /* QuartzCore.framework */,
+				71BB093418E0D24200CBA7D8 /* Apphance-Pre-Production.framework */,
 				71330E5518D7DBB500AAE6C3 /* Accelerate.framework */,
 				71330E5318D7DBAC00AAE6C3 /* AudioToolbox.framework */,
 				71330D7D18D7D73F00AAE6C3 /* Foundation.framework */,
@@ -181,6 +206,7 @@
 		71330D8318D7D74000AAE6C3 /* ProjectKaraoke */ = {
 			isa = PBXGroup;
 			children = (
+				71BB093318E0D16D00CBA7D8 /* Configuration */,
 				71330D8C18D7D74000AAE6C3 /* AppDelegate.h */,
 				71330D8D18D7D74000AAE6C3 /* AppDelegate.m */,
 				71330D9518D7D74000AAE6C3 /* ViewController.h */,
@@ -302,6 +328,14 @@
 			path = Image;
 			sourceTree = "<group>";
 		};
+		71BB093318E0D16D00CBA7D8 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				71BB093218E0D09200CBA7D8 /* SharedConstants.h */,
+			);
+			name = Configuration;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -350,6 +384,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = LanceFu;
 				TargetAttributes = {
+					71330D7918D7D73F00AAE6C3 = {
+						DevelopmentTeam = UXPMXY456K;
+					};
 					71330D9D18D7D74000AAE6C3 = {
 						TestTargetID = 71330D7918D7D73F00AAE6C3;
 					};
@@ -575,6 +612,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)",
+				);
 				GCC_INPUT_FILETYPE = sourcecode.c.objc;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ProjectKaraoke/ProjectKaraoke-Prefix.pch";
@@ -584,7 +627,12 @@
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 				);
 				INFOPLIST_FILE = "ProjectKaraoke/ProjectKaraoke-Info.plist";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "06AF8FBF-57E1-4B76-A6E3-528E63813FFC";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -594,6 +642,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)",
+				);
 				GCC_INPUT_FILETYPE = sourcecode.c.objc;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ProjectKaraoke/ProjectKaraoke-Prefix.pch";
@@ -603,7 +657,12 @@
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 				);
 				INFOPLIST_FILE = "ProjectKaraoke/ProjectKaraoke-Info.plist";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "81C1688C-E1FD-42CA-91F1-0A76BF0C427A";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
