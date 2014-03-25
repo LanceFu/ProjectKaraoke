@@ -79,9 +79,9 @@
     }
     
     NSString *documentsFolder = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
-    NSString *filePath = [documentsFolder stringByAppendingPathComponent:@"Recording.aiff"];
+    NSString *filePath = [documentsFolder stringByAppendingPathComponent:@"Recording.mp3"];
     NSError *error = NULL;
-    if (![_recorder beginRecordingToFileAtPath:filePath fileType:kAudioFileAIFFType error:&error]) {
+    if (![_recorder beginRecordingToFileAtPath:filePath fileType:kAudioFileMP3Type error:&error]) {
         NSLog(@"Error: Failed to begin recording: %@", error);
         return;
     }
@@ -123,7 +123,7 @@
 - (void)playAudio {
     [self.playButton setImage:[UIImage imageNamed:@"stop_icon"] forState:UIControlStateNormal];
     NSString *documentsFolder = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
-    NSURL *filePath = [NSURL fileURLWithPath:[documentsFolder stringByAppendingPathComponent:@"Recording.aiff"]];
+    NSURL *filePath = [NSURL fileURLWithPath:[documentsFolder stringByAppendingPathComponent:@"Recording.mp3"]];
     self.audioOutputFilePlayer = [AEAudioFilePlayer audioFilePlayerWithURL:filePath audioController:self.audioController error:NULL];
     __weak ViewController *weakSelf = self;
     self.audioOutputFilePlayer.completionBlock = ^{
