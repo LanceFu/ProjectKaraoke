@@ -72,6 +72,12 @@
 - (void)startRecording {
     self.playButton.hidden = YES;
     self.recorder = [[AERecorder alloc] initWithAudioController:self.audioController];
+    
+    // Stop playing audio if starting a new recording
+    if (self.audioOutputFilePlayer) {
+        [self stopAudio];
+    }
+    
     NSString *documentsFolder = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
     NSString *filePath = [documentsFolder stringByAppendingPathComponent:@"Recording.aiff"];
     NSError *error = NULL;
@@ -117,7 +123,7 @@
 - (void)playAudio {
     [self.playButton setImage:[UIImage imageNamed:@"stop_icon"] forState:UIControlStateNormal];
     NSString *documentsFolder = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
-    NSURL *filePath = [NSURL URLWithString:[documentsFolder stringByAppendingPathComponent:@"Recording.aiff"]];
+    NSURL *filePath = [NSURL fileURLWithPath:[documentsFolder stringByAppendingPathComponent:@"Recording.aiff"]];
     self.audioOutputFilePlayer = [AEAudioFilePlayer audioFilePlayerWithURL:filePath audioController:self.audioController error:NULL];
     __weak ViewController *weakSelf = self;
     self.audioOutputFilePlayer.completionBlock = ^{
@@ -131,6 +137,7 @@
     [self.playButton setImage:[UIImage imageNamed:@"play_icon"] forState:UIControlStateNormal];
     [self.audioController removeChannels:@[self.audioOutputFilePlayer]];
     self.audioOutputFilePlayer.currentTime = 0.0;
+    self.audioOutputFilePlayer = nil;
 }
 
 @end
