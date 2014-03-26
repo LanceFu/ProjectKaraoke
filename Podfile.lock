@@ -1,0 +1,13 @@
+PODS:
+  - EZAudio (0.0.4)
+  - TheAmazingAudioEngine (1.3)
+
+DEPENDENCIES:
+  - EZAudio (~> 0.0.4)
+  - TheAmazingAudioEngine (~> 1.3)
+
+SPEC CHECKSUMS:
+  EZAudio: 34fd967e7e7ed14549fdfad25debf40c4d18a217
+  TheAmazingAudioEngine: 85886ed62ad70d2fa43c7696f205cc217ef8b434
+
+COCOAPODS: 0.29.0

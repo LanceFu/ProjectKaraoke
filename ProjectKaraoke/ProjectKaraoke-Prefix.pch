@@ -17,5 +17,5 @@
 
 #import "SharedConstants.h"
 #import <Apphance-Pre-Production/APHLogger.h>
-#import "TheAmazingAudioEngine.h"
+#import <TheAmazingAudioEngine/TheAmazingAudioEngine.h>
 #import "AppDelegate.h"

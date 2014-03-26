@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2811B409AD134E2E8C428D9E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A7F2DFD5BB5046BBB4B2DEBB /* libPods.a */; };
 		71330D7E18D7D73F00AAE6C3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71330D7D18D7D73F00AAE6C3 /* Foundation.framework */; };
 		71330D8018D7D74000AAE6C3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71330D7F18D7D74000AAE6C3 /* CoreGraphics.framework */; };
 		71330D8218D7D74000AAE6C3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71330D8118D7D74000AAE6C3 /* UIKit.framework */; };
@@ -24,15 +25,6 @@
 		71330DAC18D7D74000AAE6C3 /* ProjectKaraokeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 71330DAB18D7D74000AAE6C3 /* ProjectKaraokeTests.m */; };
 		71330E5418D7DBAC00AAE6C3 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71330E5318D7DBAC00AAE6C3 /* AudioToolbox.framework */; };
 		71330E5618D7DBB500AAE6C3 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71330E5518D7DBB500AAE6C3 /* Accelerate.framework */; };
-		71BB090D18DD187B00CBA7D8 /* AEExpanderFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 71BB08FC18DD187A00CBA7D8 /* AEExpanderFilter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		71BB090E18DD187B00CBA7D8 /* AELimiter.m in Sources */ = {isa = PBXBuildFile; fileRef = 71BB08FE18DD187A00CBA7D8 /* AELimiter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		71BB090F18DD187B00CBA7D8 /* AELimiterFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 71BB090018DD187A00CBA7D8 /* AELimiterFilter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		71BB091018DD187B00CBA7D8 /* AEMixerBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 71BB090218DD187A00CBA7D8 /* AEMixerBuffer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		71BB091118DD187B00CBA7D8 /* AEPlaythroughChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 71BB090418DD187A00CBA7D8 /* AEPlaythroughChannel.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		71BB091218DD187B00CBA7D8 /* AERecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 71BB090618DD187A00CBA7D8 /* AERecorder.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		71BB091318DD187B00CBA7D8 /* README.markdown in Resources */ = {isa = PBXBuildFile; fileRef = 71BB090818DD187B00CBA7D8 /* README.markdown */; };
-		71BB091618DD19FD00CBA7D8 /* TPCircularBuffer+AudioBufferList.c in Sources */ = {isa = PBXBuildFile; fileRef = 71BB090918DD187B00CBA7D8 /* TPCircularBuffer+AudioBufferList.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		71BB091718DD19FD00CBA7D8 /* TPCircularBuffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 71BB090B18DD187B00CBA7D8 /* TPCircularBuffer.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		71BB092118DD2EA600CBA7D8 /* test.wav in Resources */ = {isa = PBXBuildFile; fileRef = 71BB092018DD2EA600CBA7D8 /* test.wav */; };
 		71BB092518DD306E00CBA7D8 /* play_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 71BB092318DD306E00CBA7D8 /* play_icon.png */; };
 		71BB092618DD306E00CBA7D8 /* play_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 71BB092418DD306E00CBA7D8 /* play_icon@2x.png */; };
@@ -41,7 +33,6 @@
 		71BB092D18DD35B400CBA7D8 /* stop_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 71BB092918DD35B400CBA7D8 /* stop_icon.png */; };
 		71BB092E18DD35B400CBA7D8 /* stop_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 71BB092A18DD35B400CBA7D8 /* stop_icon@2x.png */; };
 		71BB093518E0D24200CBA7D8 /* Apphance-Pre-Production.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71BB093418E0D24200CBA7D8 /* Apphance-Pre-Production.framework */; };
-		71BB093618E0D25E00CBA7D8 /* libTheAmazingAudioEngine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 71330E4F18D7DB7100AAE6C3 /* libTheAmazingAudioEngine.a */; };
 		71BB093818E0D26800CBA7D8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71BB093718E0D26800CBA7D8 /* QuartzCore.framework */; };
 		71BB093A18E0D27200CBA7D8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71BB093918E0D27200CBA7D8 /* CoreLocation.framework */; };
 		71BB093C18E0D27B00CBA7D8 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71BB093B18E0D27B00CBA7D8 /* SystemConfiguration.framework */; };
@@ -56,20 +47,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 71330D7918D7D73F00AAE6C3;
 			remoteInfo = ProjectKaraoke;
-		};
-		71330E4E18D7DB7100AAE6C3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 71330E4A18D7DB7100AAE6C3 /* TheAmazingAudioEngine.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 4C215CEC1523A7D500D36CAD;
-			remoteInfo = TheAmazingAudioEngine;
-		};
-		71330E5018D7DB9300AAE6C3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 71330E4A18D7DB7100AAE6C3 /* TheAmazingAudioEngine.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 4C215CEB1523A7D500D36CAD;
-			remoteInfo = TheAmazingAudioEngine;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -94,26 +71,8 @@
 		71330DA718D7D74000AAE6C3 /* ProjectKaraokeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ProjectKaraokeTests-Info.plist"; sourceTree = "<group>"; };
 		71330DA918D7D74000AAE6C3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		71330DAB18D7D74000AAE6C3 /* ProjectKaraokeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProjectKaraokeTests.m; sourceTree = "<group>"; };
-		71330E4A18D7DB7100AAE6C3 /* TheAmazingAudioEngine.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TheAmazingAudioEngine.xcodeproj; path = Library/TheAmazingAudioEngine/TheAmazingAudioEngine.xcodeproj; sourceTree = "<group>"; };
 		71330E5318D7DBAC00AAE6C3 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		71330E5518D7DBB500AAE6C3 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
-		71BB08FB18DD187A00CBA7D8 /* AEExpanderFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEExpanderFilter.h; sourceTree = "<group>"; };
-		71BB08FC18DD187A00CBA7D8 /* AEExpanderFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEExpanderFilter.m; sourceTree = "<group>"; };
-		71BB08FD18DD187A00CBA7D8 /* AELimiter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AELimiter.h; sourceTree = "<group>"; };
-		71BB08FE18DD187A00CBA7D8 /* AELimiter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AELimiter.m; sourceTree = "<group>"; };
-		71BB08FF18DD187A00CBA7D8 /* AELimiterFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AELimiterFilter.h; sourceTree = "<group>"; };
-		71BB090018DD187A00CBA7D8 /* AELimiterFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AELimiterFilter.m; sourceTree = "<group>"; };
-		71BB090118DD187A00CBA7D8 /* AEMixerBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEMixerBuffer.h; sourceTree = "<group>"; };
-		71BB090218DD187A00CBA7D8 /* AEMixerBuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEMixerBuffer.m; sourceTree = "<group>"; };
-		71BB090318DD187A00CBA7D8 /* AEPlaythroughChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEPlaythroughChannel.h; sourceTree = "<group>"; };
-		71BB090418DD187A00CBA7D8 /* AEPlaythroughChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEPlaythroughChannel.m; sourceTree = "<group>"; };
-		71BB090518DD187A00CBA7D8 /* AERecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AERecorder.h; sourceTree = "<group>"; };
-		71BB090618DD187A00CBA7D8 /* AERecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AERecorder.m; sourceTree = "<group>"; };
-		71BB090818DD187B00CBA7D8 /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.markdown; sourceTree = "<group>"; };
-		71BB090918DD187B00CBA7D8 /* TPCircularBuffer+AudioBufferList.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "TPCircularBuffer+AudioBufferList.c"; sourceTree = "<group>"; };
-		71BB090A18DD187B00CBA7D8 /* TPCircularBuffer+AudioBufferList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TPCircularBuffer+AudioBufferList.h"; sourceTree = "<group>"; };
-		71BB090B18DD187B00CBA7D8 /* TPCircularBuffer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = TPCircularBuffer.c; sourceTree = "<group>"; };
-		71BB090C18DD187B00CBA7D8 /* TPCircularBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPCircularBuffer.h; sourceTree = "<group>"; };
 		71BB092018DD2EA600CBA7D8 /* test.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = test.wav; sourceTree = "<group>"; };
 		71BB092318DD306E00CBA7D8 /* play_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play_icon.png; sourceTree = "<group>"; };
 		71BB092418DD306E00CBA7D8 /* play_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play_icon@2x.png"; sourceTree = "<group>"; };
@@ -128,6 +87,8 @@
 		71BB093B18E0D27B00CBA7D8 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		71BB093D18E0D28200CBA7D8 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		71BB093F18E0D28A00CBA7D8 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		A7F2DFD5BB5046BBB4B2DEBB /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAB8B871AE604694A4B72C0F /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,7 +96,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				71BB093618E0D25E00CBA7D8 /* libTheAmazingAudioEngine.a in Frameworks */,
 				71BB094018E0D28A00CBA7D8 /* AssetsLibrary.framework in Frameworks */,
 				71BB093E18E0D28200CBA7D8 /* Security.framework in Frameworks */,
 				71BB093C18E0D27B00CBA7D8 /* SystemConfiguration.framework in Frameworks */,
@@ -147,6 +107,7 @@
 				71330D8218D7D74000AAE6C3 /* UIKit.framework in Frameworks */,
 				71BB093518E0D24200CBA7D8 /* Apphance-Pre-Production.framework in Frameworks */,
 				71330D7E18D7D73F00AAE6C3 /* Foundation.framework in Frameworks */,
+				2811B409AD134E2E8C428D9E /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,11 +128,11 @@
 			isa = PBXGroup;
 			children = (
 				71330D8318D7D74000AAE6C3 /* ProjectKaraoke */,
-				71BB08FA18DD187A00CBA7D8 /* Modules */,
+				71A39CAA18E2563600C829C8 /* Library */,
 				71330DA518D7D74000AAE6C3 /* ProjectKaraokeTests */,
 				71330D7C18D7D73F00AAE6C3 /* Frameworks */,
 				71330D7B18D7D73F00AAE6C3 /* Products */,
-				71330E4A18D7DB7100AAE6C3 /* TheAmazingAudioEngine.xcodeproj */,
+				EAB8B871AE604694A4B72C0F /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -187,18 +148,19 @@
 		71330D7C18D7D73F00AAE6C3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				71BB093418E0D24200CBA7D8 /* Apphance-Pre-Production.framework */,
 				71BB093F18E0D28A00CBA7D8 /* AssetsLibrary.framework */,
 				71BB093D18E0D28200CBA7D8 /* Security.framework */,
 				71BB093B18E0D27B00CBA7D8 /* SystemConfiguration.framework */,
 				71BB093918E0D27200CBA7D8 /* CoreLocation.framework */,
 				71BB093718E0D26800CBA7D8 /* QuartzCore.framework */,
-				71BB093418E0D24200CBA7D8 /* Apphance-Pre-Production.framework */,
 				71330E5518D7DBB500AAE6C3 /* Accelerate.framework */,
 				71330E5318D7DBAC00AAE6C3 /* AudioToolbox.framework */,
 				71330D7D18D7D73F00AAE6C3 /* Foundation.framework */,
 				71330D7F18D7D74000AAE6C3 /* CoreGraphics.framework */,
 				71330D8118D7D74000AAE6C3 /* UIKit.framework */,
 				71330D9F18D7D74000AAE6C3 /* XCTest.framework */,
+				A7F2DFD5BB5046BBB4B2DEBB /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -248,45 +210,20 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		71330E4B18D7DB7100AAE6C3 /* Products */ = {
+		71A39CAA18E2563600C829C8 /* Library */ = {
 			isa = PBXGroup;
 			children = (
-				71330E4F18D7DB7100AAE6C3 /* libTheAmazingAudioEngine.a */,
+				71A39CAB18E2564000C829C8 /* TheAmazingAudioEngine */,
 			);
-			name = Products;
+			name = Library;
+			path = ProjectKaraoke;
 			sourceTree = "<group>";
 		};
-		71BB08FA18DD187A00CBA7D8 /* Modules */ = {
+		71A39CAB18E2564000C829C8 /* TheAmazingAudioEngine */ = {
 			isa = PBXGroup;
 			children = (
-				71BB08FB18DD187A00CBA7D8 /* AEExpanderFilter.h */,
-				71BB08FC18DD187A00CBA7D8 /* AEExpanderFilter.m */,
-				71BB08FD18DD187A00CBA7D8 /* AELimiter.h */,
-				71BB08FE18DD187A00CBA7D8 /* AELimiter.m */,
-				71BB08FF18DD187A00CBA7D8 /* AELimiterFilter.h */,
-				71BB090018DD187A00CBA7D8 /* AELimiterFilter.m */,
-				71BB090118DD187A00CBA7D8 /* AEMixerBuffer.h */,
-				71BB090218DD187A00CBA7D8 /* AEMixerBuffer.m */,
-				71BB090318DD187A00CBA7D8 /* AEPlaythroughChannel.h */,
-				71BB090418DD187A00CBA7D8 /* AEPlaythroughChannel.m */,
-				71BB090518DD187A00CBA7D8 /* AERecorder.h */,
-				71BB090618DD187A00CBA7D8 /* AERecorder.m */,
-				71BB090718DD187A00CBA7D8 /* TPCircularBuffer */,
 			);
-			name = Modules;
-			path = Library/TheAmazingAudioEngine/Modules;
-			sourceTree = "<group>";
-		};
-		71BB090718DD187A00CBA7D8 /* TPCircularBuffer */ = {
-			isa = PBXGroup;
-			children = (
-				71BB090818DD187B00CBA7D8 /* README.markdown */,
-				71BB090918DD187B00CBA7D8 /* TPCircularBuffer+AudioBufferList.c */,
-				71BB090A18DD187B00CBA7D8 /* TPCircularBuffer+AudioBufferList.h */,
-				71BB090B18DD187B00CBA7D8 /* TPCircularBuffer.c */,
-				71BB090C18DD187B00CBA7D8 /* TPCircularBuffer.h */,
-			);
-			path = TPCircularBuffer;
+			name = TheAmazingAudioEngine;
 			sourceTree = "<group>";
 		};
 		71BB091818DD1A2C00CBA7D8 /* Storyboard */ = {
@@ -343,14 +280,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 71330DAF18D7D74000AAE6C3 /* Build configuration list for PBXNativeTarget "ProjectKaraoke" */;
 			buildPhases = (
+				44595B42B4A243CAA819A5CE /* Check Pods Manifest.lock */,
 				71330D7618D7D73F00AAE6C3 /* Sources */,
 				71330D7718D7D73F00AAE6C3 /* Frameworks */,
 				71330D7818D7D73F00AAE6C3 /* Resources */,
+				AA2B9134C73D49BF8DC773DA /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				71330E5118D7DB9300AAE6C3 /* PBXTargetDependency */,
 			);
 			name = ProjectKaraoke;
 			productName = ProjectKaraoke;
@@ -403,12 +341,6 @@
 			mainGroup = 71330D7118D7D73F00AAE6C3;
 			productRefGroup = 71330D7B18D7D73F00AAE6C3 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 71330E4B18D7DB7100AAE6C3 /* Products */;
-					ProjectRef = 71330E4A18D7DB7100AAE6C3 /* TheAmazingAudioEngine.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				71330D7918D7D73F00AAE6C3 /* ProjectKaraoke */,
@@ -416,16 +348,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		71330E4F18D7DB7100AAE6C3 /* libTheAmazingAudioEngine.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libTheAmazingAudioEngine.a;
-			remoteRef = 71330E4E18D7DB7100AAE6C3 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		71330D7818D7D73F00AAE6C3 /* Resources */ = {
@@ -438,7 +360,6 @@
 				71BB092B18DD35B400CBA7D8 /* pause_icon.png in Resources */,
 				71BB092C18DD35B400CBA7D8 /* pause_icon@2x.png in Resources */,
 				71BB092618DD306E00CBA7D8 /* play_icon@2x.png in Resources */,
-				71BB091318DD187B00CBA7D8 /* README.markdown in Resources */,
 				71BB092D18DD35B400CBA7D8 /* stop_icon.png in Resources */,
 				71330D9918D7D74000AAE6C3 /* Images.xcassets in Resources */,
 				71330D9118D7D74000AAE6C3 /* Main_iPhone.storyboard in Resources */,
@@ -457,22 +378,47 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		44595B42B4A243CAA819A5CE /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AA2B9134C73D49BF8DC773DA /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		71330D7618D7D73F00AAE6C3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				71BB091618DD19FD00CBA7D8 /* TPCircularBuffer+AudioBufferList.c in Sources */,
-				71BB091718DD19FD00CBA7D8 /* TPCircularBuffer.c in Sources */,
-				71BB090F18DD187B00CBA7D8 /* AELimiterFilter.m in Sources */,
-				71BB090D18DD187B00CBA7D8 /* AEExpanderFilter.m in Sources */,
 				71330D9718D7D74000AAE6C3 /* ViewController.m in Sources */,
-				71BB091018DD187B00CBA7D8 /* AEMixerBuffer.m in Sources */,
-				71BB091218DD187B00CBA7D8 /* AERecorder.m in Sources */,
 				71330D8E18D7D74000AAE6C3 /* AppDelegate.m in Sources */,
 				71330D8A18D7D74000AAE6C3 /* main.m in Sources */,
-				71BB090E18DD187B00CBA7D8 /* AELimiter.m in Sources */,
-				71BB091118DD187B00CBA7D8 /* AEPlaythroughChannel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -491,11 +437,6 @@
 			isa = PBXTargetDependency;
 			target = 71330D7918D7D73F00AAE6C3 /* ProjectKaraoke */;
 			targetProxy = 71330DA318D7D74000AAE6C3 /* PBXContainerItemProxy */;
-		};
-		71330E5118D7DB9300AAE6C3 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = TheAmazingAudioEngine;
-			targetProxy = 71330E5018D7DB9300AAE6C3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -609,6 +550,7 @@
 		};
 		71330DB018D7D74000AAE6C3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EAB8B871AE604694A4B72C0F /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -639,6 +581,7 @@
 		};
 		71330DB118D7D74000AAE6C3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EAB8B871AE604694A4B72C0F /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
