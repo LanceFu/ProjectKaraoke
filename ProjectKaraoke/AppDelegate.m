@@ -16,7 +16,7 @@
     // Enables Apphance crash reporting
     NSSetUncaughtExceptionHandler(&APHUncaughtExceptionHandler);
     
-    self.audioController = [[AEAudioController alloc] initWithAudioDescription:[AEAudioController nonInterleaved16BitStereoAudioDescription] inputEnabled:YES];
+    self.audioController = [[AEAudioController alloc] initWithAudioDescription:[AEAudioController nonInterleaved16BitStereoAudioDescription] inputEnabled:YES useVoiceProcessing:YES];
     NSError *error = NULL;
     BOOL result = [_audioController start:&error];
     if (!result) {

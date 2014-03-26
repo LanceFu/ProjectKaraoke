@@ -16,8 +16,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OMF-H8-3SV" customClass="EZAudioPlotGL">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cnN-fN-zyE">
-                                <rect key="frame" x="85" y="269" width="150" height="30"/>
+                                <rect key="frame" x="85" y="418" width="150" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="lfJ-qU-9Ji"/>
@@ -32,7 +37,7 @@
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gs5-4G-JRE">
-                                <rect key="frame" x="120" y="319" width="80" height="80"/>
+                                <rect key="frame" x="120" y="468" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="F74-b2-Oci"/>
@@ -48,14 +53,19 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="OMF-H8-3SV" secondAttribute="bottom" id="0te-Y7-vEs"/>
                             <constraint firstAttribute="centerX" secondItem="cnN-fN-zyE" secondAttribute="centerX" id="7oc-p0-WNm"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Gs5-4G-JRE" secondAttribute="bottom" constant="20" id="Lju-JH-SUY"/>
                             <constraint firstAttribute="centerX" secondItem="Gs5-4G-JRE" secondAttribute="centerX" id="MVm-ii-PZy"/>
-                            <constraint firstAttribute="centerY" secondItem="cnN-fN-zyE" secondAttribute="centerY" id="UCD-Cp-7lR"/>
                             <constraint firstItem="Gs5-4G-JRE" firstAttribute="top" secondItem="cnN-fN-zyE" secondAttribute="bottom" constant="20" id="ZIJ-JO-dpd"/>
+                            <constraint firstAttribute="trailing" secondItem="OMF-H8-3SV" secondAttribute="trailing" id="ihg-Si-5O1"/>
+                            <constraint firstItem="OMF-H8-3SV" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="vTZ-RQ-B2Z"/>
+                            <constraint firstItem="OMF-H8-3SV" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="z80-n1-Nyg"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="79u-Qy-18d"/>
                     <connections>
+                        <outlet property="audioPlot" destination="OMF-H8-3SV" id="HWW-Hd-koS"/>
                         <outlet property="playButton" destination="Gs5-4G-JRE" id="kSg-GQ-0qc"/>
                         <outlet property="recordButton" destination="cnN-fN-zyE" id="r7W-hF-YCZ"/>
                     </connections>
@@ -81,7 +91,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="play_icon.png" width="67" height="67"/>
+        <image name="play_icon.png" width="125" height="125"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import <TheAmazingAudioEngine/AERecorder.h>
+#import <EZAudio/EZAudioPlotGL.h>
 
 @interface ViewController ()
 
@@ -15,9 +16,15 @@
 @property (strong, nonatomic) IBOutlet UIButton *playButton;
 
 @property (readonly, nonatomic) AEAudioController *audioController;
-@property (strong, nonatomic) AEAudioFilePlayer* audioSourceFilePlayer;
-@property (strong, nonatomic) AEAudioFilePlayer* audioOutputFilePlayer;
+@property (strong, nonatomic) AEAudioFilePlayer *audioSourceFilePlayer;
+@property (strong, nonatomic) AEAudioFilePlayer *audioOutputFilePlayer;
 @property (strong, nonatomic) AERecorder *recorder;
+@property (strong, nonatomic) AEFloatConverter *floatConverter;
+@property (strong, nonatomic) AEBlockAudioReceiver *audioReceiver;
+
+@property (nonatomic, weak) IBOutlet EZAudioPlotGL *audioPlot;
+
+@property (nonatomic) float **floatBuffers;
 
 @end
 
@@ -32,11 +39,39 @@
     self.recordButton.layer.borderWidth = 1.0f;
     self.recordButton.layer.borderColor = [UIColor lightGrayColor].CGColor;
     
+    // Customize Waveform
+    self.audioPlot.color = [UIColor colorWithRed:(252.0/255.0) green:(175.0/255.0) blue:(62.0/255.0) alpha:1.0];
+    self.audioPlot.backgroundColor = [UIColor colorWithRed:1.000 green:1.000 blue:1.000 alpha:1];
+    self.audioPlot.plotType     = EZPlotTypeRolling;
+    self.audioPlot.shouldFill   = YES;
+    self.audioPlot.shouldMirror = YES;
+    
+    // Init float converter
+    self.floatConverter = [[AEFloatConverter alloc] initWithSourceFormat:self.audioController.audioDescription];
+    self.floatBuffers = (float**)malloc(sizeof(float*)*self.audioController.audioDescription.mChannelsPerFrame);
+    assert(self.floatBuffers);
+    for (int i = 0; i < self.audioController.audioDescription.mChannelsPerFrame; i++) {
+        self.floatBuffers[i] = (float*)malloc([self getBufferFrameSize]);
+        assert(self.floatBuffers[i]);
+    }
+    
+    // Init audio receiver to draw waveform
+    self.audioReceiver = [AEBlockAudioReceiver audioReceiverWithBlock:^(void *source,
+                                                                        const AudioTimeStamp *time,
+                                                                        UInt32 frames,
+                                                                        AudioBufferList *audio) {
+        dispatch_async(dispatch_get_main_queue(),^{
+            if (AEFloatConverterToFloat(self.floatConverter, audio, self.floatBuffers, frames)) {
+                [self.audioPlot updateBuffer:*self.floatBuffers withBufferSize:frames];
+            }
+        });
+    }];
+    
     // Read the file from within project
     NSURL *filePath = [[NSBundle mainBundle] URLForResource: @"test" withExtension: @"wav"];
     self.audioSourceFilePlayer = [AEAudioFilePlayer audioFilePlayerWithURL:filePath audioController:self.audioController error:NULL];
     __weak ViewController *weakSelf = self;
-    self.audioOutputFilePlayer.completionBlock = ^{
+    self.audioSourceFilePlayer.completionBlock = ^{
         [weakSelf endRecording];
     };
 }
@@ -57,27 +92,66 @@
 
 #pragma mark - Private Methods
 
+- (UInt32)getBufferFrameSize {
+    UInt32 bufferFrameSize;
+    UInt32 propSize = sizeof(bufferFrameSize);
+    [self checkResult:AudioUnitGetProperty(self.audioController.audioUnit,
+#if TARGET_OS_IPHONE
+                                              kAudioUnitProperty_MaximumFramesPerSlice,
+#elif TARGET_OS_MAC
+                                              kAudioDevicePropertyBufferFrameSize,
+#endif
+                                              kAudioUnitScope_Global,
+                                              0,
+                                              &bufferFrameSize,
+                                              &propSize)
+               operation:"Failed to get buffer frame size"];
+    return bufferFrameSize;
+}
+
+
+- (void)checkResult:(OSStatus)result
+         operation:(const char *)operation {
+	if (result == noErr) return;
+	char errorString[20];
+	// see if it appears to be a 4-char-code
+	*(UInt32 *)(errorString + 1) = CFSwapInt32HostToBig(result);
+	if (isprint(errorString[1]) && isprint(errorString[2]) && isprint(errorString[3]) && isprint(errorString[4])) {
+		errorString[0] = errorString[5] = '\'';
+		errorString[6] = '\0';
+	} else
+		// no, format it as an integer
+		sprintf(errorString, "%d", (int)result);
+	fprintf(stderr, "Error: %s (%s)\n", operation, errorString);
+	exit(1);
+}
+
+
+#pragma mark - Private Methods
+
 - (IBAction)recordingAction:(id)sender {
     if (!self.recorder) {
-        NSLog(@"======== Start Recording ========");
         [self startRecording];
     }
     else {
-        NSLog(@"======== End Recording ========");
         [self endRecording];
     }
 }
 
 
 - (void)startRecording {
+    NSLog(@"======== Start Recording ========");
+    [self.recordButton setTitle:@"End Recording" forState:UIControlStateNormal];
     self.playButton.hidden = YES;
-    self.recorder = [[AERecorder alloc] initWithAudioController:self.audioController];
+    [self.audioPlot clear];
     
     // Stop playing audio if starting a new recording
     if (self.audioOutputFilePlayer) {
         [self stopAudio];
     }
     
+    // Prepare file for recording
+    self.recorder = [[AERecorder alloc] initWithAudioController:self.audioController];
     NSString *documentsFolder = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
     NSString *filePath = [documentsFolder stringByAppendingPathComponent:@"Recording.aiff"];
     NSError *error = NULL;
@@ -85,45 +159,47 @@
         NSLog(@"Error: Failed to begin recording: %@", error);
         return;
     }
+    
     [self.audioController addChannels:@[self.audioSourceFilePlayer]];
     [self.audioController addInputReceiver:self.recorder];
     [self.audioController addOutputReceiver:self.recorder];
-    
-    [self.recordButton setTitle:@"End Recording" forState:UIControlStateNormal];
+    [self.audioController addInputReceiver:self.audioReceiver];
 }
 
 
 - (void)endRecording {
+    NSLog(@"======== End Recording ========");
+    self.playButton.hidden = NO;
+    [self.recordButton setTitle:@"Start Recording" forState:UIControlStateNormal];
+    
     [self.audioController removeChannels:@[self.audioSourceFilePlayer]];
     self.audioSourceFilePlayer.currentTime = 0.0;
     
     [self.audioController removeInputReceiver:self.recorder];
     [self.audioController removeOutputReceiver:self.recorder];
+    [self.audioController removeInputReceiver:self.audioReceiver];
     [self.recorder finishRecording];
     
-    self.playButton.hidden = NO;
     self.recorder = nil;
-    
-    [self.recordButton setTitle:@"Start Recording" forState:UIControlStateNormal];
 }
 
 
 - (IBAction)playAction:(id)sender {
     if (self.audioOutputFilePlayer.channelIsPlaying) {
-        NSLog(@"======== Stop Playing ========");
         [self stopAudio];
     }
     else {
-        NSLog(@"======== Start Playing ========");
         [self playAudio];
     }
 }
 
 
 - (void)playAudio {
+    NSLog(@"======== Start Playing ========");
     [self.playButton setImage:[UIImage imageNamed:@"stop_icon"] forState:UIControlStateNormal];
+    
     NSString *documentsFolder = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
-    NSURL *filePath = [NSURL fileURLWithPath:[documentsFolder stringByAppendingPathComponent:@"Recording.mp3"]];
+    NSURL *filePath = [NSURL fileURLWithPath:[documentsFolder stringByAppendingPathComponent:@"Recording.aiff"]];
     self.audioOutputFilePlayer = [AEAudioFilePlayer audioFilePlayerWithURL:filePath audioController:self.audioController error:NULL];
     __weak ViewController *weakSelf = self;
     self.audioOutputFilePlayer.completionBlock = ^{
@@ -134,7 +210,9 @@
 
 
 - (void)stopAudio {
+    NSLog(@"======== Stop Playing ========");
     [self.playButton setImage:[UIImage imageNamed:@"play_icon"] forState:UIControlStateNormal];
+    
     [self.audioController removeChannels:@[self.audioOutputFilePlayer]];
     self.audioOutputFilePlayer.currentTime = 0.0;
     self.audioOutputFilePlayer = nil;

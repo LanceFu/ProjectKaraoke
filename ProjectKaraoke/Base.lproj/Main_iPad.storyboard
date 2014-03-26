@@ -31,8 +31,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SA7-KJ-vj8" customClass="EZAudioPlotGL">
+                                <rect key="frame" x="0.0" y="64" width="768" height="960"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tBp-RG-wmf">
-                                <rect key="frame" x="309" y="497" width="150" height="30"/>
+                                <rect key="frame" x="309" y="854" width="150" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="D11-8t-Zh0"/>
@@ -47,7 +52,7 @@
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eh5-zc-yIt">
-                                <rect key="frame" x="344" y="547" width="80" height="80"/>
+                                <rect key="frame" x="344" y="904" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="NtM-0p-l9g"/>
@@ -63,14 +68,19 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Eh5-zc-yIt" secondAttribute="bottom" constant="40" id="47z-bY-QK0"/>
                             <constraint firstItem="Eh5-zc-yIt" firstAttribute="top" secondItem="tBp-RG-wmf" secondAttribute="bottom" constant="20" id="91g-Wp-FtO"/>
                             <constraint firstAttribute="centerX" secondItem="tBp-RG-wmf" secondAttribute="centerX" id="F3K-QG-8Fv"/>
+                            <constraint firstItem="SA7-KJ-vj8" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Jnb-SL-eqL"/>
                             <constraint firstAttribute="centerX" secondItem="Eh5-zc-yIt" secondAttribute="centerX" id="Nrb-y8-oB6"/>
-                            <constraint firstAttribute="centerY" secondItem="tBp-RG-wmf" secondAttribute="centerY" id="O8Y-H9-hrA"/>
+                            <constraint firstItem="SA7-KJ-vj8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Yen-sQ-qBN"/>
+                            <constraint firstAttribute="trailing" secondItem="SA7-KJ-vj8" secondAttribute="trailing" id="dN3-Xs-ngg"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="SA7-KJ-vj8" secondAttribute="bottom" id="qXR-ak-5MQ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Hxs-WL-mAn"/>
                     <connections>
+                        <outlet property="audioPlot" destination="SA7-KJ-vj8" id="kH1-BL-eWN"/>
                         <outlet property="playButton" destination="Eh5-zc-yIt" id="Wy4-3M-MrB"/>
                         <outlet property="recordButton" destination="tBp-RG-wmf" id="scJ-US-RaW"/>
                     </connections>
@@ -81,7 +91,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="play_icon.png" width="67" height="67"/>
+        <image name="play_icon.png" width="125" height="125"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
