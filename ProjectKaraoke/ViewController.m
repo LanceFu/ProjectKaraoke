@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "AERecorder.h"
+#import <TheAmazingAudioEngine/AERecorder.h>
 
 @interface ViewController ()
 
@@ -79,9 +79,9 @@
     }
     
     NSString *documentsFolder = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
-    NSString *filePath = [documentsFolder stringByAppendingPathComponent:@"Recording.mp3"];
+    NSString *filePath = [documentsFolder stringByAppendingPathComponent:@"Recording.aiff"];
     NSError *error = NULL;
-    if (![_recorder beginRecordingToFileAtPath:filePath fileType:kAudioFileMP3Type error:&error]) {
+    if (![_recorder beginRecordingToFileAtPath:filePath fileType:kAudioFileAIFFType error:&error]) {
         NSLog(@"Error: Failed to begin recording: %@", error);
         return;
     }
