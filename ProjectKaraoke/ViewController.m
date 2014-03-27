@@ -66,14 +66,6 @@
             }
         });
     }];
-    
-    // Read the file from within project
-    NSURL *filePath = [[NSBundle mainBundle] URLForResource: @"test" withExtension: @"wav"];
-    self.audioSourceFilePlayer = [AEAudioFilePlayer audioFilePlayerWithURL:filePath audioController:self.audioController error:NULL];
-    __weak ViewController *weakSelf = self;
-    self.audioSourceFilePlayer.completionBlock = ^{
-        [weakSelf endRecording];
-    };
 }
 
 
@@ -149,6 +141,15 @@
     if (self.audioOutputFilePlayer) {
         [self stopAudio];
     }
+    if (!self.audioSourceFilePlayer) {
+        // Read the file from within project
+        NSURL *filePath = [[NSBundle mainBundle] URLForResource: @"test" withExtension: @"wav"];
+        self.audioSourceFilePlayer = [AEAudioFilePlayer audioFilePlayerWithURL:filePath audioController:self.audioController error:NULL];
+        __weak ViewController *weakSelf = self;
+        self.audioSourceFilePlayer.completionBlock = ^{
+            [weakSelf endRecording];
+        };
+    }
     
     // Prepare file for recording
     self.recorder = [[AERecorder alloc] initWithAudioController:self.audioController];
@@ -164,6 +165,7 @@
     [self.audioController addInputReceiver:self.recorder];
     [self.audioController addOutputReceiver:self.recorder];
     [self.audioController addInputReceiver:self.audioReceiver];
+    [self.audioController addOutputReceiver:self.audioReceiver];
 }
 
 
@@ -173,14 +175,14 @@
     [self.recordButton setTitle:@"Start Recording" forState:UIControlStateNormal];
     
     [self.audioController removeChannels:@[self.audioSourceFilePlayer]];
-    self.audioSourceFilePlayer.currentTime = 0.0;
-    
     [self.audioController removeInputReceiver:self.recorder];
     [self.audioController removeOutputReceiver:self.recorder];
     [self.audioController removeInputReceiver:self.audioReceiver];
+    [self.audioController removeOutputReceiver:self.audioReceiver];
     [self.recorder finishRecording];
     
     self.recorder = nil;
+    self.audioSourceFilePlayer = nil;
 }
 
 
