@@ -16,6 +16,10 @@
     // Enables Apphance crash reporting
     NSSetUncaughtExceptionHandler(&APHUncaughtExceptionHandler);
     
+    [SCSoundCloud  setClientID:SOUNDCLOUD_CLIENT_ID
+                        secret:SOUNDCLOUD_CLIENT_SECRET
+                   redirectURL:[NSURL URLWithString:@"ProjectKaraoke://"]];
+    
     self.audioController = [[AEAudioController alloc] initWithAudioDescription:[AEAudioController nonInterleaved16BitStereoAudioDescription] inputEnabled:YES useVoiceProcessing:YES];
     NSError *error = NULL;
     BOOL result = [_audioController start:&error];
@@ -51,6 +55,20 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    NSLog(@"Calling Application Bundle ID: %@", sourceApplication);
+    if ([sourceApplication isEqualToString:@"com.apple.mobilesafari"]) {
+        // TODO: Update when handling SoundCloud authentication
+        NSLog(@"URL scheme:%@", [url scheme]);
+        NSLog(@"URL query: %@", [url query]);
+        
+        return YES;
+    }
+    
+    return NO;
 }
 
 @end
