@@ -18,4 +18,5 @@
 #import "SharedConstants.h"
 #import <Apphance-Pre-Production/APHLogger.h>
 #import <TheAmazingAudioEngine/TheAmazingAudioEngine.h>
+#import <CocoaSoundCloudAPI/SCAPI.h>
 #import "AppDelegate.h"
