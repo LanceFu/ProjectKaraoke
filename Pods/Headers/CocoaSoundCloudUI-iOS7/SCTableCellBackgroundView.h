@@ -1,0 +1,1 @@
+../../../Library/CocoaSoundCloudUI/Sources/SoundCloudUI/SCTableCellBackgroundView.h

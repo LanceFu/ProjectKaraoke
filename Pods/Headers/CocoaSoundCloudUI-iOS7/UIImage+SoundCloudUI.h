@@ -1,0 +1,1 @@
+../../../Library/CocoaSoundCloudUI/Sources/CocoaAdditions/UIImage+SoundCloudUI.h
