@@ -1,5 +1,3 @@
 platform :ios, '7.0'
 pod 'TheAmazingAudioEngine', '~> 1.3'
-pod 'EZAudio', :path => 'Pods/EZAudio/EZAudio.podspec'
 pod 'CocoaSoundCloudAPI', '1.0.1'
-pod 'CocoaSoundCloudUI-iOS7', :path => 'Pods/CocoaSoundCloudUI/CocoaSoundCloudUI.podspec'

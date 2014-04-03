@@ -1,5 +1,5 @@
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers" "${PODS_ROOT}/Headers/CocoaSoundCloudAPI" "${PODS_ROOT}/Headers/CocoaSoundCloudUI-iOS7" "${PODS_ROOT}/Headers/EZAudio" "${PODS_ROOT}/Headers/NXOAuth2Client" "${PODS_ROOT}/Headers/OHAttributedLabel" "${PODS_ROOT}/Headers/TheAmazingAudioEngine"
-OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers" -isystem "${PODS_ROOT}/Headers/CocoaSoundCloudAPI" -isystem "${PODS_ROOT}/Headers/CocoaSoundCloudUI-iOS7" -isystem "${PODS_ROOT}/Headers/EZAudio" -isystem "${PODS_ROOT}/Headers/NXOAuth2Client" -isystem "${PODS_ROOT}/Headers/OHAttributedLabel" -isystem "${PODS_ROOT}/Headers/TheAmazingAudioEngine"
-OTHER_LDFLAGS = -ObjC -framework AVFoundation -framework Accelerate -framework AudioToolbox -framework CoreLocation -framework CoreText -framework GLKit -framework Security
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers" "${PODS_ROOT}/Headers/CocoaSoundCloudAPI" "${PODS_ROOT}/Headers/NXOAuth2Client" "${PODS_ROOT}/Headers/TheAmazingAudioEngine"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers" -isystem "${PODS_ROOT}/Headers/CocoaSoundCloudAPI" -isystem "${PODS_ROOT}/Headers/NXOAuth2Client" -isystem "${PODS_ROOT}/Headers/TheAmazingAudioEngine"
+OTHER_LDFLAGS = -ObjC -framework Accelerate -framework AudioToolbox -framework Security
 PODS_ROOT = ${SRCROOT}/Pods
