@@ -44,13 +44,13 @@
                       error:(NSError *)error {
     switch (state) {
         case FBSessionStateOpen: {
-//            [SVProgressHUD showWithStatus:@"Authenticating"];
+            [SVProgressHUD showWithStatus:@"Authenticating"];
             [[FBRequest requestForGraphPath:@"me/accounts"] startWithCompletionHandler:^(FBRequestConnection *connection, NSDictionary *result, NSError *error) {
-//                [SVProgressHUD dismiss];
+                [SVProgressHUD dismiss];
                 NSArray<FBGraphObject> *accounts = [result objectForKey:@"data"];
                 
                 [[FBRequest requestForMe] startWithCompletionHandler:^(FBRequestConnection *connection, NSDictionary<FBGraphUser> *user, NSError *error) {
-//                    [SVProgressHUD dismiss];
+                    [SVProgressHUD dismiss];
                     
                     if ([accounts count] > 1) {
                         self.facebookAccounts = accounts;
@@ -104,7 +104,7 @@
         if (buttonIndex != actionSheet.cancelButtonIndex) {
             if (buttonIndex == 0){
                 [[FBRequest requestForMe] startWithCompletionHandler:^(FBRequestConnection *connection, NSDictionary<FBGraphUser> *user, NSError *error) {
-//                    [SVProgressHUD dismiss];
+                    [SVProgressHUD dismiss];
                     [self receiveGraphConnection:connection userDictionary:user token:[FBSession.activeSession.accessTokenData accessToken ] error:error];
                 }];
             }
@@ -113,7 +113,7 @@
                 [[FBRequest requestForGraphPath:[NSString stringWithFormat:@"%@",[fbAccount objectForKey:@"id"]] ] startWithCompletionHandler:^(FBRequestConnection *connection, NSDictionary<FBGraphUser> *page, NSError *error) {
                     //need to do this nested so we can get the (validated) email
                     [[FBRequest requestForMe] startWithCompletionHandler:^(FBRequestConnection *connection, NSDictionary<FBGraphUser> *user, NSError *error) {
-//                        [SVProgressHUD dismiss];
+                        [SVProgressHUD dismiss];
                         [user setObject:[page objectForKey:@"name"] forKey:@"name"];
                         [self receiveGraphConnection:connection userDictionary:page token:[fbAccount objectForKey:@"access_token"] error:error];
                     }];
