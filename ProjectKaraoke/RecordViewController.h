@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  RecordViewController.h
 //  ProjectKaraoke
 //
 //  Created by Lance Fu on 2014-03-17.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface RecordViewController : UIViewController
 
 @end

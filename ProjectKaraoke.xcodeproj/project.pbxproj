@@ -16,7 +16,7 @@
 		71330D8E18D7D74000AAE6C3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 71330D8D18D7D74000AAE6C3 /* AppDelegate.m */; };
 		71330D9118D7D74000AAE6C3 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71330D8F18D7D74000AAE6C3 /* Main_iPhone.storyboard */; };
 		71330D9418D7D74000AAE6C3 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71330D9218D7D74000AAE6C3 /* Main_iPad.storyboard */; };
-		71330D9718D7D74000AAE6C3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71330D9618D7D74000AAE6C3 /* ViewController.m */; };
+		71330D9718D7D74000AAE6C3 /* RecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71330D9618D7D74000AAE6C3 /* RecordViewController.m */; };
 		71330D9918D7D74000AAE6C3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71330D9818D7D74000AAE6C3 /* Images.xcassets */; };
 		71330DA018D7D74000AAE6C3 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71330D9F18D7D74000AAE6C3 /* XCTest.framework */; };
 		71330DA118D7D74000AAE6C3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71330D7D18D7D73F00AAE6C3 /* Foundation.framework */; };
@@ -68,8 +68,8 @@
 		71330D8D18D7D74000AAE6C3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		71330D9018D7D74000AAE6C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		71330D9318D7D74000AAE6C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		71330D9518D7D74000AAE6C3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		71330D9618D7D74000AAE6C3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		71330D9518D7D74000AAE6C3 /* RecordViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecordViewController.h; sourceTree = "<group>"; };
+		71330D9618D7D74000AAE6C3 /* RecordViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecordViewController.m; sourceTree = "<group>"; };
 		71330D9818D7D74000AAE6C3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		71330D9E18D7D74000AAE6C3 /* ProjectKaraokeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProjectKaraokeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		71330D9F18D7D74000AAE6C3 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -187,8 +187,8 @@
 				71330D8D18D7D74000AAE6C3 /* AppDelegate.m */,
 				71D8F97F1906F81D0076EBE9 /* LandingViewController.h */,
 				71D8F9801906F81D0076EBE9 /* LandingViewController.m */,
-				71330D9518D7D74000AAE6C3 /* ViewController.h */,
-				71330D9618D7D74000AAE6C3 /* ViewController.m */,
+				71330D9518D7D74000AAE6C3 /* RecordViewController.h */,
+				71330D9618D7D74000AAE6C3 /* RecordViewController.m */,
 				71D8F97C1906F5BF0076EBE9 /* UserManager.h */,
 				71D8F97D1906F5BF0076EBE9 /* UserManager.m */,
 				71330D9818D7D74000AAE6C3 /* Images.xcassets */,
@@ -438,7 +438,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				71330D9718D7D74000AAE6C3 /* ViewController.m in Sources */,
+				71330D9718D7D74000AAE6C3 /* RecordViewController.m in Sources */,
 				71D8F9811906F81D0076EBE9 /* LandingViewController.m in Sources */,
 				71330D8E18D7D74000AAE6C3 /* AppDelegate.m in Sources */,
 				71D8F97E1906F5BF0076EBE9 /* UserManager.m in Sources */,

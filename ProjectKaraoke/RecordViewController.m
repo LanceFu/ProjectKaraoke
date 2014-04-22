@@ -1,16 +1,16 @@
 //
-//  ViewController.m
+//  RecordViewController.m
 //  ProjectKaraoke
 //
 //  Created by Lance Fu on 2014-03-17.
 //  Copyright (c) 2014 LanceFu. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "RecordViewController.h"
 #import <TheAmazingAudioEngine/AERecorder.h>
 #import <EZAudio/EZAudioPlotGL.h>
 
-@interface ViewController ()
+@interface RecordViewController ()
 
 @property (strong, nonatomic) IBOutlet UIButton *recordButton;
 @property (strong, nonatomic) IBOutlet UIButton *playButton;
@@ -28,7 +28,7 @@
 
 @end
 
-@implementation ViewController
+@implementation RecordViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -145,7 +145,7 @@
         // Read the file from within project
         NSURL *filePath = [[NSBundle mainBundle] URLForResource: @"test" withExtension: @"wav"];
         self.audioSourceFilePlayer = [AEAudioFilePlayer audioFilePlayerWithURL:filePath audioController:self.audioController error:NULL];
-        __weak ViewController *weakSelf = self;
+        __weak RecordViewController *weakSelf = self;
         self.audioSourceFilePlayer.completionBlock = ^{
             [weakSelf endRecording];
         };
@@ -203,7 +203,7 @@
     NSString *documentsFolder = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
     NSURL *filePath = [NSURL fileURLWithPath:[documentsFolder stringByAppendingPathComponent:@"Recording.aiff"]];
     self.audioOutputFilePlayer = [AEAudioFilePlayer audioFilePlayerWithURL:filePath audioController:self.audioController error:NULL];
-    __weak ViewController *weakSelf = self;
+    __weak RecordViewController *weakSelf = self;
     self.audioOutputFilePlayer.completionBlock = ^{
         [weakSelf stopAudio];
     };

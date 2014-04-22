@@ -46,10 +46,10 @@
             </objects>
             <point key="canvasLocation" x="754" y="240"/>
         </scene>
-        <!--View Controller-->
+        <!--Record View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RecordViewController" id="vXZ-lx-hvc" customClass="RecordViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -59,7 +59,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OMF-H8-3SV" customClass="EZAudioPlotGL">
-                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
@@ -102,7 +102,7 @@
                             <constraint firstItem="Gs5-4G-JRE" firstAttribute="top" secondItem="cnN-fN-zyE" secondAttribute="bottom" constant="20" id="ZIJ-JO-dpd"/>
                             <constraint firstAttribute="trailing" secondItem="OMF-H8-3SV" secondAttribute="trailing" id="ihg-Si-5O1"/>
                             <constraint firstItem="OMF-H8-3SV" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="vTZ-RQ-B2Z"/>
-                            <constraint firstItem="OMF-H8-3SV" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="z80-n1-Nyg"/>
+                            <constraint firstItem="OMF-H8-3SV" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="top" id="z80-n1-Nyg"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="79u-Qy-18d"/>
