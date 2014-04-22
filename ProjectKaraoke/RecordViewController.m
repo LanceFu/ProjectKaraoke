@@ -32,8 +32,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-	
-    self.navigationController.navigationBar.hidden = YES;
     
     self.recordButton.layer.cornerRadius = 8.0f;
     self.recordButton.layer.borderWidth = 1.0f;
