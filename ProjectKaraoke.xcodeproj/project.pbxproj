@@ -38,6 +38,7 @@
 		71BB093C18E0D27B00CBA7D8 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71BB093B18E0D27B00CBA7D8 /* SystemConfiguration.framework */; };
 		71BB093E18E0D28200CBA7D8 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71BB093D18E0D28200CBA7D8 /* Security.framework */; };
 		71BB094018E0D28A00CBA7D8 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71BB093F18E0D28A00CBA7D8 /* AssetsLibrary.framework */; };
+		71D8F97B1906F3320076EBE9 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71D8F97A1906F3320076EBE9 /* FacebookSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,7 @@
 		71BB093B18E0D27B00CBA7D8 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		71BB093D18E0D28200CBA7D8 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		71BB093F18E0D28A00CBA7D8 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		71D8F97A1906F3320076EBE9 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		A7F2DFD5BB5046BBB4B2DEBB /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAB8B871AE604694A4B72C0F /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -104,6 +106,7 @@
 				71330E5618D7DBB500AAE6C3 /* Accelerate.framework in Frameworks */,
 				71330E5418D7DBAC00AAE6C3 /* AudioToolbox.framework in Frameworks */,
 				71330D8018D7D74000AAE6C3 /* CoreGraphics.framework in Frameworks */,
+				71D8F97B1906F3320076EBE9 /* FacebookSDK.framework in Frameworks */,
 				71330D8218D7D74000AAE6C3 /* UIKit.framework in Frameworks */,
 				71BB093518E0D24200CBA7D8 /* Apphance-Pre-Production.framework in Frameworks */,
 				71330D7E18D7D73F00AAE6C3 /* Foundation.framework in Frameworks */,
@@ -148,6 +151,7 @@
 		71330D7C18D7D73F00AAE6C3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				71D8F97A1906F3320076EBE9 /* FacebookSDK.framework */,
 				71BB093418E0D24200CBA7D8 /* Apphance-Pre-Production.framework */,
 				71BB093F18E0D28A00CBA7D8 /* AssetsLibrary.framework */,
 				71BB093D18E0D28200CBA7D8 /* Security.framework */,
@@ -559,6 +563,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)",
+					"$(PROJECT_DIR)",
+					/Users/lancefu/Documents/FacebookSDK,
 				);
 				GCC_INPUT_FILETYPE = sourcecode.c.objc;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -590,6 +596,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)",
+					"$(PROJECT_DIR)",
+					/Users/lancefu/Documents/FacebookSDK,
 				);
 				GCC_INPUT_FILETYPE = sourcecode.c.objc;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

@@ -27,6 +27,7 @@
 			<string>com.lancefu.ProjectKaraoke</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
+				<string>fb1429822987268451</string>
 				<string>ProjectKaraoke</string>
 			</array>
 		</dict>
@@ -49,6 +50,10 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>FacebookAppID</key>
+	<string>1429822987268451</string>
+	<key>FacebookDisplayName</key>
+	<string>Project Karaoke</string>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

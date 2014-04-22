@@ -19,4 +19,5 @@
 #import <Apphance-Pre-Production/APHLogger.h>
 #import <TheAmazingAudioEngine/TheAmazingAudioEngine.h>
 #import <CocoaSoundCloudAPI/SCAPI.h>
+#import <FacebookSDK/FacebookSDK.h>
 #import "AppDelegate.h"
