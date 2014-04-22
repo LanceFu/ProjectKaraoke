@@ -36,6 +36,12 @@
 #define COCOAPODS_VERSION_MINOR_OHAttributedLabel 5
 #define COCOAPODS_VERSION_PATCH_OHAttributedLabel 3
 
+// SVProgressHUD
+#define COCOAPODS_POD_AVAILABLE_SVProgressHUD
+#define COCOAPODS_VERSION_MAJOR_SVProgressHUD 1
+#define COCOAPODS_VERSION_MINOR_SVProgressHUD 0
+#define COCOAPODS_VERSION_PATCH_SVProgressHUD 0
+
 // TheAmazingAudioEngine
 #define COCOAPODS_POD_AVAILABLE_TheAmazingAudioEngine
 #define COCOAPODS_VERSION_MAJOR_TheAmazingAudioEngine 1

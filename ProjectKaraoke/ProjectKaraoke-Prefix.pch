@@ -20,4 +20,5 @@
 #import <TheAmazingAudioEngine/TheAmazingAudioEngine.h>
 #import <CocoaSoundCloudAPI/SCAPI.h>
 #import <FacebookSDK/FacebookSDK.h>
+#import <SVProgressHUD/SVProgressHUD.h>
 #import "AppDelegate.h"
