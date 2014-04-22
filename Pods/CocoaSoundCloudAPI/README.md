@@ -25,6 +25,22 @@ This guide assumes a few things:
 
 We're taking a fresh new iOS Project as an example. Integration into an existing project and/or a Desktop project should be similar.
 
+## CocoaPods
+[CocoaPods](http://cocoapods.org/) is a dependency manager for Xcode projects. 
+If you are already using `CocoaPods` you can include all necessary libraries by adding following lines to your `Podfile`:
+```
+pod 'CocoaSoundCloudAPI', '1.0.1'
+pod 'CocoaSoundCloudUI', '1.0.5'
+```
+and run `pod install`.
+
+Please note, that these `Pods` already include following `dependencies`:
+* `OHAttributedLabel`
+* `JSONKit`
+* `NXOAuth2Client`
+
+:hand: ^5 Everything is set up, and you can skip to the **Usage** section!
+
 ### In the Terminal
 
 1. Go to your project directory.

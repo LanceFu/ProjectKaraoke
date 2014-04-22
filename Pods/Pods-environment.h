@@ -10,7 +10,7 @@
 #define COCOAPODS_POD_AVAILABLE_CocoaSoundCloudAPI
 #define COCOAPODS_VERSION_MAJOR_CocoaSoundCloudAPI 1
 #define COCOAPODS_VERSION_MINOR_CocoaSoundCloudAPI 0
-#define COCOAPODS_VERSION_PATCH_CocoaSoundCloudAPI 1
+#define COCOAPODS_VERSION_PATCH_CocoaSoundCloudAPI 2
 
 // CocoaSoundCloudUI-iOS7
 #define COCOAPODS_POD_AVAILABLE_CocoaSoundCloudUI_iOS7
@@ -28,7 +28,7 @@
 #define COCOAPODS_POD_AVAILABLE_NXOAuth2Client
 #define COCOAPODS_VERSION_MAJOR_NXOAuth2Client 1
 #define COCOAPODS_VERSION_MINOR_NXOAuth2Client 2
-#define COCOAPODS_VERSION_PATCH_NXOAuth2Client 1
+#define COCOAPODS_VERSION_PATCH_NXOAuth2Client 2
 
 // OHAttributedLabel
 #define COCOAPODS_POD_AVAILABLE_OHAttributedLabel
