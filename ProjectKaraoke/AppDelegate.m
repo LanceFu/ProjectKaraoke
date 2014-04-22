@@ -20,6 +20,14 @@
                         secret:SOUNDCLOUD_CLIENT_SECRET
                    redirectURL:[NSURL URLWithString:@"ProjectKaraoke://"]];
     
+    if (FBSession.activeSession.state == FBSessionStateCreatedTokenLoaded) {
+        [FBSession openActiveSessionWithReadPermissions:@[@"basic_info"]
+                                           allowLoginUI:NO
+                                      completionHandler:^(FBSession *session, FBSessionState state, NSError *error) {
+                                          [self sessionStateChanged:session state:state error:error];
+                                      }];
+    }
+    
     self.audioController = [[AEAudioController alloc] initWithAudioDescription:[AEAudioController nonInterleaved16BitStereoAudioDescription] inputEnabled:YES useVoiceProcessing:YES];
     NSError *error = NULL;
     BOOL result = [_audioController start:&error];
@@ -50,6 +58,7 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    [FBAppCall handleDidBecomeActive];
 }
 
 
@@ -61,6 +70,13 @@
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
     NSLog(@"Calling Application Bundle ID: %@", sourceApplication);
     if ([sourceApplication isEqualToString:@"com.apple.mobilesafari"]) {
+        if ([url.scheme hasPrefix:@"fb"]) {
+            [FBSession.activeSession setStateChangeHandler:^(FBSession *session, FBSessionState state, NSError *error) {
+                [self sessionStateChanged:session state:state error:error];
+            }];
+            return [FBAppCall handleOpenURL:url sourceApplication:sourceApplication];
+        }
+        
         // TODO: Update when handling SoundCloud authentication
         NSLog(@"URL scheme:%@", [url scheme]);
         NSLog(@"URL query: %@", [url query]);
@@ -70,5 +86,61 @@
     
     return NO;
 }
+
+
+- (void)sessionStateChanged:(FBSession *)session state:(FBSessionState) state error:(NSError *)error {
+    if (!error && state == FBSessionStateOpen) {
+        NSLog(@"Facebook session opened");
+        return;
+    }
+    if (state == FBSessionStateClosed || state == FBSessionStateClosedLoginFailed) {
+        NSLog(@"Facebook session closed");
+    }
+    
+    // Handle errors
+    if (error) {
+        NSLog(@"Error");
+        NSString *alertText;
+        NSString *alertTitle;
+        // If the error requires people using an app to make an action outside of the app in order to recover
+        if ([FBErrorUtility shouldNotifyUserForError:error] == YES) {
+            alertTitle = @"Something went wrong with Facebook session";
+            alertText = [FBErrorUtility userMessageForError:error];
+            [self showAlertMessage:alertText withTitle:alertTitle];
+        }
+        else {
+            // If the user cancelled login, do nothing
+            if ([FBErrorUtility errorCategoryForError:error] == FBErrorCategoryUserCancelled) {
+                NSLog(@"User cancelled login");
+            }
+            else if ([FBErrorUtility errorCategoryForError:error] == FBErrorCategoryAuthenticationReopenSession){
+                alertTitle = @"Facebook session Error";
+                alertText = @"Your current session is no longer valid. Please log in again.";
+                [self showAlertMessage:alertText withTitle:alertTitle];
+            }
+            else {
+                //Get more error information from the error
+                NSDictionary *errorInformation = [[[error.userInfo objectForKey:@"com.facebook.sdk:ParsedJSONResponseKey"] objectForKey:@"body"] objectForKey:@"error"];
+                
+                // Show the user an error message
+                alertTitle = @"Something went wrong";
+                alertText = [NSString stringWithFormat:@"Please retry. \n\n If the problem persists contact us and mention this error code: %@", [errorInformation objectForKey:@"message"]];
+                [self showAlertMessage:alertText withTitle:alertTitle];
+            }
+        }
+        [FBSession.activeSession closeAndClearTokenInformation];
+    }
+}
+
+
+- (void)showAlertMessage:(NSString *)message withTitle:(NSString *)title {
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title
+                                                        message:message
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+    [alertView show];
+}
+
 
 @end
