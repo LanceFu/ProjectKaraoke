@@ -7,6 +7,7 @@
 //
 
 #import "LandingViewController.h"
+#import "TrackTableViewController.h"
 
 @interface LandingViewController () <UIActionSheetDelegate>
 
@@ -25,8 +26,6 @@
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
-    
-    self.navigationController.navigationBar.hidden = NO;
 }
 
 
@@ -101,7 +100,8 @@
 
 - (void)receiveGraphConnection:(FBRequestConnection*)connection userDictionary:(NSDictionary<FBGraphUser>*)user token:(NSString *)token error:(NSError*)error {
     // Authenticate with our server and update view here
-    
+    TrackTableViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"TrackTableViewController"];
+    [self.navigationController setViewControllers:@[controller] animated:YES];
 }
 
 

@@ -43,6 +43,9 @@
 		71D8F9811906F81D0076EBE9 /* LandingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71D8F9801906F81D0076EBE9 /* LandingViewController.m */; };
 		71D8F9841906FCFE0076EBE9 /* FB_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 71D8F9821906FCFE0076EBE9 /* FB_icon.png */; };
 		71D8F9851906FCFE0076EBE9 /* FB_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 71D8F9831906FCFE0076EBE9 /* FB_icon@2x.png */; };
+		71D8F98B19073FCD0076EBE9 /* TrackTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71D8F98A19073FCD0076EBE9 /* TrackTableViewController.m */; };
+		71D8F98E1907418D0076EBE9 /* record_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 71D8F98C1907418D0076EBE9 /* record_icon.png */; };
+		71D8F98F1907418D0076EBE9 /* record_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 71D8F98D1907418D0076EBE9 /* record_icon@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +102,10 @@
 		71D8F9801906F81D0076EBE9 /* LandingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LandingViewController.m; sourceTree = "<group>"; };
 		71D8F9821906FCFE0076EBE9 /* FB_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FB_icon.png; sourceTree = "<group>"; };
 		71D8F9831906FCFE0076EBE9 /* FB_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FB_icon@2x.png"; sourceTree = "<group>"; };
+		71D8F98919073FCD0076EBE9 /* TrackTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackTableViewController.h; sourceTree = "<group>"; };
+		71D8F98A19073FCD0076EBE9 /* TrackTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackTableViewController.m; sourceTree = "<group>"; };
+		71D8F98C1907418D0076EBE9 /* record_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = record_icon.png; sourceTree = "<group>"; };
+		71D8F98D1907418D0076EBE9 /* record_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "record_icon@2x.png"; sourceTree = "<group>"; };
 		A7F2DFD5BB5046BBB4B2DEBB /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAB8B871AE604694A4B72C0F /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -189,6 +196,8 @@
 				71D8F9801906F81D0076EBE9 /* LandingViewController.m */,
 				71330D9518D7D74000AAE6C3 /* RecordViewController.h */,
 				71330D9618D7D74000AAE6C3 /* RecordViewController.m */,
+				71D8F98919073FCD0076EBE9 /* TrackTableViewController.h */,
+				71D8F98A19073FCD0076EBE9 /* TrackTableViewController.m */,
 				71D8F97C1906F5BF0076EBE9 /* UserManager.h */,
 				71D8F97D1906F5BF0076EBE9 /* UserManager.m */,
 				71330D9818D7D74000AAE6C3 /* Images.xcassets */,
@@ -279,6 +288,8 @@
 				71BB092818DD35B400CBA7D8 /* pause_icon@2x.png */,
 				71BB092318DD306E00CBA7D8 /* play_icon.png */,
 				71BB092418DD306E00CBA7D8 /* play_icon@2x.png */,
+				71D8F98C1907418D0076EBE9 /* record_icon.png */,
+				71D8F98D1907418D0076EBE9 /* record_icon@2x.png */,
 				71BB092918DD35B400CBA7D8 /* stop_icon.png */,
 				71BB092A18DD35B400CBA7D8 /* stop_icon@2x.png */,
 			);
@@ -379,6 +390,7 @@
 				71330D9418D7D74000AAE6C3 /* Main_iPad.storyboard in Resources */,
 				71BB092B18DD35B400CBA7D8 /* pause_icon.png in Resources */,
 				71BB092C18DD35B400CBA7D8 /* pause_icon@2x.png in Resources */,
+				71D8F98E1907418D0076EBE9 /* record_icon.png in Resources */,
 				71BB092618DD306E00CBA7D8 /* play_icon@2x.png in Resources */,
 				71D8F9841906FCFE0076EBE9 /* FB_icon.png in Resources */,
 				71BB092D18DD35B400CBA7D8 /* stop_icon.png in Resources */,
@@ -386,6 +398,7 @@
 				71D8F9851906FCFE0076EBE9 /* FB_icon@2x.png in Resources */,
 				71330D9118D7D74000AAE6C3 /* Main_iPhone.storyboard in Resources */,
 				71330D8818D7D74000AAE6C3 /* InfoPlist.strings in Resources */,
+				71D8F98F1907418D0076EBE9 /* record_icon@2x.png in Resources */,
 				71BB092E18DD35B400CBA7D8 /* stop_icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -441,6 +454,7 @@
 				71330D9718D7D74000AAE6C3 /* RecordViewController.m in Sources */,
 				71D8F9811906F81D0076EBE9 /* LandingViewController.m in Sources */,
 				71330D8E18D7D74000AAE6C3 /* AppDelegate.m in Sources */,
+				71D8F98B19073FCD0076EBE9 /* TrackTableViewController.m in Sources */,
 				71D8F97E1906F5BF0076EBE9 /* UserManager.m in Sources */,
 				71330D8A18D7D74000AAE6C3 /* main.m in Sources */,
 			);

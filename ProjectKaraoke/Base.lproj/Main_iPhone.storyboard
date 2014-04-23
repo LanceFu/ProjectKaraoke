@@ -46,6 +46,63 @@
             </objects>
             <point key="canvasLocation" x="754" y="240"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="QmU-v2-wfk">
+            <objects>
+                <navigationController storyboardIdentifier="TrackNavigationController" definesPresentationContext="YES" id="87I-io-CYX" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="k9N-fm-jII">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="o8l-s9-WfN" kind="relationship" relationship="rootViewController" id="Bb2-CH-nhB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iub-4l-b8P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1247" y="240"/>
+        </scene>
+        <!--Track Table View Controller - Tracks-->
+        <scene sceneID="cgz-PS-3Y3">
+            <objects>
+                <tableViewController storyboardIdentifier="TrackTableViewController" id="o8l-s9-WfN" customClass="TrackTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="J0j-eW-IeB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="U1z-ub-BMp">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="U1z-ub-BMp" id="xsz-Py-YlR">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="o8l-s9-WfN" id="MdF-Pi-pa2"/>
+                            <outlet property="delegate" destination="o8l-s9-WfN" id="IVw-JI-9pL"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Tracks" id="Jhe-FF-Xwh">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="Skd-bM-rvw">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="hec-rv-kpQ">
+                                <rect key="frame" x="274" y="7" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="record_icon.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="recordAction:" destination="o8l-s9-WfN" eventType="touchUpInside" id="eDN-Uh-taQ"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o91-UV-oU4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1727" y="240"/>
+        </scene>
         <!--Record View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
@@ -114,7 +171,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1239" y="240"/>
+            <point key="canvasLocation" x="2226" y="240"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ix7-8v-eAH">
@@ -135,6 +192,7 @@
     <resources>
         <image name="FB_icon.png" width="44" height="44"/>
         <image name="play_icon.png" width="125" height="125"/>
+        <image name="record_icon.png" width="30" height="30"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
