@@ -8,8 +8,9 @@
 
 #import "TrackTableViewController.h"
 #import "RecordViewController.h"
+#import "UserManager.h"
 
-@interface TrackTableViewController ()
+@interface TrackTableViewController () <UIAlertViewDelegate>
 
 @end
 
@@ -34,6 +35,18 @@
     [self.navigationController pushViewController:controller animated:YES];
 }
 
+
+- (IBAction)logoutAction:(id)sender {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:@"Are you sure you want to log out?" delegate:self cancelButtonTitle:@"No" otherButtonTitles:@"Yes",nil];
+    [alert show];
+}
+
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == 1) {
+        [UserManager logout];
+    }
+}
 
 #pragma mark - TableViewDataSource
 
