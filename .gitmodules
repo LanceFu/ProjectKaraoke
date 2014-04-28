@@ -1,6 +1,3 @@
-[submodule "Library/CocoaSoundCloudUI"]
-	path = Library/CocoaSoundCloudUI
-	url = https://github.com/soundcloud/CocoaSoundCloudUI.git
 [submodule "Library/EZAudio"]
 	path = Library/EZAudio
 	url = https://github.com/syedhali/EZAudio.git

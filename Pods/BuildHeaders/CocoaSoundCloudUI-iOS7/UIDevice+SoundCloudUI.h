@@ -1,1 +1,0 @@
-../../../Library/CocoaSoundCloudUI/Sources/CocoaAdditions/UIDevice+SoundCloudUI.h

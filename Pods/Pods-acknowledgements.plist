@@ -428,7 +428,7 @@
    limitations under the License.
 </string>
 			<key>Title</key>
-			<string>CocoaSoundCloudUI-iOS7</string>
+			<string>CocoaSoundCloudUI</string>
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
 		</dict>

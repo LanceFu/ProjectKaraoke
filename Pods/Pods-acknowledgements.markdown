@@ -207,7 +207,7 @@ This application makes use of the following third party libraries:
    limitations under the License.
 
 
-## CocoaSoundCloudUI-iOS7
+## CocoaSoundCloudUI
 
 
                                  Apache License
