@@ -7,13 +7,35 @@
 //
 
 #import "AppDelegate.h"
+#import "UserManager.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Starts an Apphance session
+    if ([UserManager isLoggedIn]) {
+        self.audioController = [[AEAudioController alloc] initWithAudioDescription:[AEAudioController nonInterleaved16BitStereoAudioDescription] inputEnabled:YES useVoiceProcessing:YES];
+        NSError *error = NULL;
+        BOOL result = [_audioController start:&error];
+        if (!result) {
+            NSLog(@"Error: Audio Controller failed to start.");
+        }
+    }
+    else {
+        UIStoryboard *storyboard;
+        if ([[UIDevice currentDevice].model isEqualToString:@"iPhone"]) {
+            storyboard = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil];
+        }
+        else {
+            storyboard = [UIStoryboard storyboardWithName:@"Main_iPad" bundle:nil];
+        }
+        
+        UINavigationController *navigationController = [storyboard instantiateViewControllerWithIdentifier:@"LandingNavigationController"];
+        self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+        self.window.rootViewController = navigationController;
+        [self.window makeKeyAndVisible];
+    }
+    
 	[APHLogger startNewSessionWithApplicationKey:APPHANCE_APP_KEY];
-    // Enables Apphance crash reporting
     NSSetUncaughtExceptionHandler(&APHUncaughtExceptionHandler);
     
     [SCSoundCloud  setClientID:SOUNDCLOUD_CLIENT_ID
@@ -26,13 +48,6 @@
                                       completionHandler:^(FBSession *session, FBSessionState state, NSError *error) {
                                           [self sessionStateChanged:session state:state error:error];
                                       }];
-    }
-    
-    self.audioController = [[AEAudioController alloc] initWithAudioDescription:[AEAudioController nonInterleaved16BitStereoAudioDescription] inputEnabled:YES useVoiceProcessing:YES];
-    NSError *error = NULL;
-    BOOL result = [_audioController start:&error];
-    if (!result) {
-        NSLog(@"Error: Audio Controller failed to start.");
     }
     
     return YES;

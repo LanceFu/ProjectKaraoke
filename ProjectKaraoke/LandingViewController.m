@@ -8,6 +8,7 @@
 
 #import "LandingViewController.h"
 #import "TrackTableViewController.h"
+#import "UserManager.h"
 
 @interface LandingViewController () <UIActionSheetDelegate>
 
@@ -99,6 +100,9 @@
 
 
 - (void)receiveGraphConnection:(FBRequestConnection*)connection userDictionary:(NSDictionary<FBGraphUser>*)user token:(NSString *)token error:(NSError*)error {
+    // Save Facebook token in Keychain
+    [UserManager setAuthToken:token forService:FACEBOOK_SERVICE];
+    
     // Authenticate with our server and update view here
     TrackTableViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"TrackTableViewController"];
     [self.navigationController setViewControllers:@[controller] animated:YES];
@@ -118,8 +122,7 @@
             }
             else {
                 NSDictionary *fbAccount = [self.facebookAccounts objectAtIndex:buttonIndex-1];
-                [[FBRequest requestForGraphPath:[NSString stringWithFormat:@"%@",[fbAccount objectForKey:@"id"]] ] startWithCompletionHandler:^(FBRequestConnection *connection, NSDictionary<FBGraphUser> *page, NSError *error) {
-                    //need to do this nested so we can get the (validated) email
+                [[FBRequest requestForGraphPath:[NSString stringWithFormat:@"%@",[fbAccount objectForKey:@"id"]]] startWithCompletionHandler:^(FBRequestConnection *connection, NSDictionary <FBGraphUser> *page, NSError *error) {
                     [[FBRequest requestForMe] startWithCompletionHandler:^(FBRequestConnection *connection, NSDictionary<FBGraphUser> *user, NSError *error) {
                         [SVProgressHUD dismiss];
                         [user setObject:[page objectForKey:@"name"] forKey:@"name"];

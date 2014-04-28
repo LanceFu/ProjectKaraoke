@@ -11,6 +11,58 @@
 
 @implementation UserManager
 
++ (BOOL)isLoggedIn {
+    return [UserManager authTokenForService:FACEBOOK_SERVICE] != nil;
+}
+
+
++ (void)clearSavedCredentials {
+    [UserManager setAuthToken:nil forService:FACEBOOK_SERVICE];
+}
+
+
++ (NSString *)authTokenForService:(NSString *)service {
+    return [UserManager secureValueForService:service ForKey:PROJECT_KARAOKE_ACCOUNT];
+}
+
+
++ (void)setAuthToken:(NSString *)authToken forService:(NSString *)service {
+    [UserManager setSecureValue:authToken forService:service forKey:PROJECT_KARAOKE_ACCOUNT];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"token-changed" object:self];
+}
+
+
++ (void)setSecureValue:(NSString *)value forService:(NSString *)service forKey:(NSString *)key{
+    if (value) {
+        [SSKeychain setPassword:value
+                     forService:service
+                        account:key];
+    }
+    else {
+        [SSKeychain deletePasswordForService:service account:key];
+    }
+}
+
+
++ (NSString *)secureValueForService:(NSString *)service ForKey:(NSString *)key {
+    return [SSKeychain passwordForService:service account:key];
+}
+
+
++ (void)logout {
+    [FBSession.activeSession closeAndClearTokenInformation];
+    [UserManager clearSavedCredentials];
+    
+    UIStoryboard *storyboard = storyboard = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil];
+    if ([[UIDevice currentDevice].model isEqualToString:@"iPad"]) {
+        storyboard = [UIStoryboard storyboardWithName:@"Main_iPad" bundle:nil];
+    }
+    AppDelegate *delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    UIViewController *controller = [storyboard instantiateViewControllerWithIdentifier:@"LandingViewController"];
+    delegate.window.rootViewController = controller;
+}
+
+
 + (void)requestForFacebookReadPermissions:(NSArray *)permissionsNeeded withCompletionCallback:(RequestFacebookPermissionCompletionCallback)completionCallback {
     [FBRequestConnection startWithGraphPath:@"/me/permissions"
                           completionHandler:^(FBRequestConnection *connection, id result, NSError *error) {

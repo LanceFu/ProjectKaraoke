@@ -21,4 +21,5 @@
 #import <CocoaSoundCloudAPI/SCAPI.h>
 #import <FacebookSDK/FacebookSDK.h>
 #import <SVProgressHUD/SVProgressHUD.h>
+#import <SSKeychain/SSKeychain.h>
 #import "AppDelegate.h"
