@@ -11,16 +11,21 @@
 
 @implementation AppDelegate
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    if ([UserManager isLoggedIn]) {
-        self.audioController = [[AEAudioController alloc] initWithAudioDescription:[AEAudioController nonInterleaved16BitStereoAudioDescription] inputEnabled:YES useVoiceProcessing:YES];
+- (AEAudioController *)audioController {
+    if (!_audioController) {
+        _audioController = [[AEAudioController alloc] initWithAudioDescription:[AEAudioController nonInterleaved16BitStereoAudioDescription] inputEnabled:YES useVoiceProcessing:YES];
         NSError *error = NULL;
         BOOL result = [_audioController start:&error];
         if (!result) {
             NSLog(@"Error: Audio Controller failed to start.");
         }
     }
-    else {
+    return _audioController;
+}
+
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    if (![UserManager isLoggedIn]) {
         UIStoryboard *storyboard;
         if ([[UIDevice currentDevice].model isEqualToString:@"iPhone"]) {
             storyboard = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil];
