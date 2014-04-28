@@ -67,6 +67,18 @@
 }
 
 
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    
+    if (self.audioOutputFilePlayer.channelIsPlaying) {
+        [self stopAudio];
+    }
+    if (self.recorder) {
+        [self endRecording];
+    }
+}
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -100,8 +112,7 @@
 }
 
 
-- (void)checkResult:(OSStatus)result
-         operation:(const char *)operation {
+- (void)checkResult:(OSStatus)result operation:(const char *)operation {
 	if (result == noErr) return;
 	char errorString[20];
 	// see if it appears to be a 4-char-code
