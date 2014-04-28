@@ -58,7 +58,7 @@
         storyboard = [UIStoryboard storyboardWithName:@"Main_iPad" bundle:nil];
     }
     AppDelegate *delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    UIViewController *controller = [storyboard instantiateViewControllerWithIdentifier:@"LandingViewController"];
+    UINavigationController *controller = [storyboard instantiateViewControllerWithIdentifier:@"LandingNavigationController"];
     delegate.window.rootViewController = controller;
 }
 
