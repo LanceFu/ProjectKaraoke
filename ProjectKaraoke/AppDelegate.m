@@ -45,7 +45,7 @@
     
     [SCSoundCloud  setClientID:SOUNDCLOUD_CLIENT_ID
                         secret:SOUNDCLOUD_CLIENT_SECRET
-                   redirectURL:[NSURL URLWithString:@"ProjectKaraoke://"]];
+                   redirectURL:[NSURL URLWithString:@"ProjectKaraoke://oauth"]];
     
     if (FBSession.activeSession.state == FBSessionStateCreatedTokenLoaded) {
         [FBSession openActiveSessionWithReadPermissions:@[@"basic_info"]

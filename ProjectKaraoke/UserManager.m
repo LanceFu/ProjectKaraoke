@@ -18,6 +18,7 @@
 
 + (void)clearSavedCredentials {
     [UserManager setAuthToken:nil forService:FACEBOOK_SERVICE];
+    [SCSoundCloud removeAccess];
 }
 
 

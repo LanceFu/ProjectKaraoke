@@ -7,6 +7,7 @@
 //
 
 #import "TrackTableViewController.h"
+#import "SCUI.h"
 #import "RecordViewController.h"
 #import "UserManager.h"
 
@@ -31,22 +32,55 @@
 #pragma mark - Private Methods
 
 - (IBAction)recordAction:(id)sender {
-    RecordViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"RecordViewController"];
-    [self.navigationController pushViewController:controller animated:YES];
+    if ([SCSoundCloud account]) {
+        RecordViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"RecordViewController"];
+        [self.navigationController pushViewController:controller animated:YES];
+    }
+    else {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:@"SoundCloud account is required to use our record feature. Would you like to log in?" delegate:self cancelButtonTitle:@"No" otherButtonTitles:@"Yes", nil];
+        alert.tag = 1;
+        [alert show];
+    }
 }
 
 
 - (IBAction)logoutAction:(id)sender {
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:@"Are you sure you want to log out?" delegate:self cancelButtonTitle:@"No" otherButtonTitles:@"Yes",nil];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:@"Are you sure you want to log out?" delegate:self cancelButtonTitle:@"No" otherButtonTitles:@"Yes", nil];
+    alert.tag = 0;
     [alert show];
 }
 
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
-    if (buttonIndex == 1) {
-        [UserManager logout];
+    if (alertView.tag == 0) {
+        if (buttonIndex == 1) {
+            [UserManager logout];
+        }
+    }
+    else if (alertView.tag == 1) {
+        if (buttonIndex == 1) {
+            SCLoginViewControllerCompletionHandler handler = ^(NSError *error) {
+                if (SC_CANCELED(error)) {
+                    NSLog(@"SoundCloud: Login request is canceled!");
+                }
+                else if (error) {
+                    NSLog(@"SoundCloud: Error: %@", [error localizedDescription]);
+                }
+                else {
+                    NSLog(@"SoundCloud: User is logged in successfully!");
+                    RecordViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"RecordViewController"];
+                    [self.navigationController pushViewController:controller animated:YES];
+                }
+            };
+            
+            [SCSoundCloud requestAccessWithPreparedAuthorizationURLHandler:^(NSURL *preparedURL) {
+                SCLoginViewController *loginViewController = [SCLoginViewController loginViewControllerWithPreparedURL:preparedURL completionHandler:handler];
+                [self.navigationController presentViewController:loginViewController animated:YES completion:nil];
+            }];
+        }
     }
 }
+
 
 #pragma mark - TableViewDataSource
 
