@@ -7,6 +7,7 @@ PODS:
   - EZAudio (0.0.4)
   - NXOAuth2Client (1.2.2)
   - OHAttributedLabel (3.5.3)
+  - SSKeychain (1.2.2)
   - SVProgressHUD (1.0)
   - TheAmazingAudioEngine (1.3)
 
@@ -14,6 +15,7 @@ DEPENDENCIES:
   - CocoaSoundCloudAPI
   - CocoaSoundCloudUI-iOS7 (from `Library/CocoaSoundCloudUI/CocoaSoundCloudUI.podspec`)
   - EZAudio (from `Library/EZAudio/EZAudio.podspec`)
+  - SSKeychain
   - SVProgressHUD
   - TheAmazingAudioEngine
 
@@ -29,6 +31,7 @@ SPEC CHECKSUMS:
   EZAudio: 34fd967e7e7ed14549fdfad25debf40c4d18a217
   NXOAuth2Client: 2abb027fb64a9d9a467202e281bb0f2206924661
   OHAttributedLabel: 985e4b57eec0dc6add79179ac47ec888b8a914e7
+  SSKeychain: 3d0b76c87e7b062a7ad1631a825fddec84367d44
   SVProgressHUD: 5e10939a296debf5fe5a5895eda9539b8b2114f1
   TheAmazingAudioEngine: 85886ed62ad70d2fa43c7696f205cc217ef8b434
 
