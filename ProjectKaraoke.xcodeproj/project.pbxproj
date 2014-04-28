@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2811B409AD134E2E8C428D9E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A7F2DFD5BB5046BBB4B2DEBB /* libPods.a */; };
+		712E9DA6190F1EC500886268 /* logout_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 712E9DA4190F1EC500886268 /* logout_icon.png */; };
+		712E9DA7190F1EC500886268 /* logout_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 712E9DA5190F1EC500886268 /* logout_icon@2x.png */; };
 		71330D7E18D7D73F00AAE6C3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71330D7D18D7D73F00AAE6C3 /* Foundation.framework */; };
 		71330D8018D7D74000AAE6C3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71330D7F18D7D74000AAE6C3 /* CoreGraphics.framework */; };
 		71330D8218D7D74000AAE6C3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71330D8118D7D74000AAE6C3 /* UIKit.framework */; };
@@ -59,6 +61,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		712E9DA4190F1EC500886268 /* logout_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logout_icon.png; sourceTree = "<group>"; };
+		712E9DA5190F1EC500886268 /* logout_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logout_icon@2x.png"; sourceTree = "<group>"; };
 		71330D7A18D7D73F00AAE6C3 /* ProjectKaraoke.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectKaraoke.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71330D7D18D7D73F00AAE6C3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		71330D7F18D7D74000AAE6C3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -284,6 +288,8 @@
 			children = (
 				71D8F9821906FCFE0076EBE9 /* FB_icon.png */,
 				71D8F9831906FCFE0076EBE9 /* FB_icon@2x.png */,
+				712E9DA4190F1EC500886268 /* logout_icon.png */,
+				712E9DA5190F1EC500886268 /* logout_icon@2x.png */,
 				71BB092718DD35B400CBA7D8 /* pause_icon.png */,
 				71BB092818DD35B400CBA7D8 /* pause_icon@2x.png */,
 				71BB092318DD306E00CBA7D8 /* play_icon.png */,
@@ -389,6 +395,7 @@
 				71BB092518DD306E00CBA7D8 /* play_icon.png in Resources */,
 				71330D9418D7D74000AAE6C3 /* Main_iPad.storyboard in Resources */,
 				71BB092B18DD35B400CBA7D8 /* pause_icon.png in Resources */,
+				712E9DA6190F1EC500886268 /* logout_icon.png in Resources */,
 				71BB092C18DD35B400CBA7D8 /* pause_icon@2x.png in Resources */,
 				71D8F98E1907418D0076EBE9 /* record_icon.png in Resources */,
 				71BB092618DD306E00CBA7D8 /* play_icon@2x.png in Resources */,
@@ -398,6 +405,7 @@
 				71D8F9851906FCFE0076EBE9 /* FB_icon@2x.png in Resources */,
 				71330D9118D7D74000AAE6C3 /* Main_iPhone.storyboard in Resources */,
 				71330D8818D7D74000AAE6C3 /* InfoPlist.strings in Resources */,
+				712E9DA7190F1EC500886268 /* logout_icon@2x.png in Resources */,
 				71D8F98F1907418D0076EBE9 /* record_icon@2x.png in Resources */,
 				71BB092E18DD35B400CBA7D8 /* stop_icon@2x.png in Resources */,
 			);

@@ -86,11 +86,10 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Tracks" id="QYZ-gv-cah">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="bhq-cd-yDk">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ckp-Mf-5k2">
-                                <rect key="frame" x="16" y="5" width="80" height="33"/>
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ckp-Mf-5k2">
+                                <rect key="frame" x="16" y="7" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Log Out">
+                                <state key="normal" image="logout_icon.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -204,6 +203,7 @@
     </scenes>
     <resources>
         <image name="FB_icon.png" width="44" height="44"/>
+        <image name="logout_icon.png" width="30" height="30"/>
         <image name="play_icon.png" width="125" height="125"/>
         <image name="record_icon.png" width="30" height="30"/>
     </resources>
