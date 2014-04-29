@@ -75,7 +75,24 @@
             
             [SCSoundCloud requestAccessWithPreparedAuthorizationURLHandler:^(NSURL *preparedURL) {
                 SCLoginViewController *loginViewController = [SCLoginViewController loginViewControllerWithPreparedURL:preparedURL completionHandler:handler];
-                [self.navigationController presentViewController:loginViewController animated:YES completion:nil];
+                // TODO: Workaround for status bar overlapping issue with SCLoginViewController
+                UIViewController *controller = [[UIViewController alloc] init];
+                [controller addChildViewController:loginViewController];
+                controller.view.backgroundColor = self.view.backgroundColor;
+                if (floor(NSFoundationVersionNumber) > NSFoundationVersionNumber_iOS_6_1) {
+                    loginViewController.view.frame = CGRectMake(loginViewController.view.frame.origin.x,
+                                                                loginViewController.view.frame.origin.y + 20,
+                                                                controller.view.frame.size.width,
+                                                                controller.view.frame.size.height - 20);
+                } else {
+                    loginViewController.view.frame = CGRectMake(loginViewController.view.frame.origin.x,
+                                                                loginViewController.view.frame.origin.y,
+                                                                controller.view.frame.size.width,
+                                                                controller.view.frame.size.height);
+                }
+                
+                [controller.view addSubview:loginViewController.view];
+                [self.navigationController presentViewController:controller animated:YES completion:nil];
             }];
         }
     }
