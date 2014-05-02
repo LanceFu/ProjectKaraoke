@@ -48,6 +48,8 @@
 		71D8F98B19073FCD0076EBE9 /* TrackTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71D8F98A19073FCD0076EBE9 /* TrackTableViewController.m */; };
 		71D8F98E1907418D0076EBE9 /* record_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 71D8F98C1907418D0076EBE9 /* record_icon.png */; };
 		71D8F98F1907418D0076EBE9 /* record_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 71D8F98D1907418D0076EBE9 /* record_icon@2x.png */; };
+		71F52FF0191450B20081AC26 /* upload_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 71F52FEE191450B20081AC26 /* upload_icon.png */; };
+		71F52FF1191450B20081AC26 /* upload_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 71F52FEF191450B20081AC26 /* upload_icon@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +112,8 @@
 		71D8F98A19073FCD0076EBE9 /* TrackTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackTableViewController.m; sourceTree = "<group>"; };
 		71D8F98C1907418D0076EBE9 /* record_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = record_icon.png; sourceTree = "<group>"; };
 		71D8F98D1907418D0076EBE9 /* record_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "record_icon@2x.png"; sourceTree = "<group>"; };
+		71F52FEE191450B20081AC26 /* upload_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = upload_icon.png; sourceTree = "<group>"; };
+		71F52FEF191450B20081AC26 /* upload_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "upload_icon@2x.png"; sourceTree = "<group>"; };
 		A7F2DFD5BB5046BBB4B2DEBB /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAB8B871AE604694A4B72C0F /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -298,6 +302,8 @@
 				71D8F98D1907418D0076EBE9 /* record_icon@2x.png */,
 				71BB092918DD35B400CBA7D8 /* stop_icon.png */,
 				71BB092A18DD35B400CBA7D8 /* stop_icon@2x.png */,
+				71F52FEE191450B20081AC26 /* upload_icon.png */,
+				71F52FEF191450B20081AC26 /* upload_icon@2x.png */,
 			);
 			path = Image;
 			sourceTree = "<group>";
@@ -398,6 +404,7 @@
 				712E9DA6190F1EC500886268 /* logout_icon.png in Resources */,
 				71BB092C18DD35B400CBA7D8 /* pause_icon@2x.png in Resources */,
 				71D8F98E1907418D0076EBE9 /* record_icon.png in Resources */,
+				71F52FF0191450B20081AC26 /* upload_icon.png in Resources */,
 				71BB092618DD306E00CBA7D8 /* play_icon@2x.png in Resources */,
 				71D8F9841906FCFE0076EBE9 /* FB_icon.png in Resources */,
 				71BB092D18DD35B400CBA7D8 /* stop_icon.png in Resources */,
@@ -405,6 +412,7 @@
 				71D8F9851906FCFE0076EBE9 /* FB_icon@2x.png in Resources */,
 				71330D9118D7D74000AAE6C3 /* Main_iPhone.storyboard in Resources */,
 				71330D8818D7D74000AAE6C3 /* InfoPlist.strings in Resources */,
+				71F52FF1191450B20081AC26 /* upload_icon@2x.png in Resources */,
 				712E9DA7190F1EC500886268 /* logout_icon@2x.png in Resources */,
 				71D8F98F1907418D0076EBE9 /* record_icon@2x.png in Resources */,
 				71BB092E18DD35B400CBA7D8 /* stop_icon@2x.png in Resources */,

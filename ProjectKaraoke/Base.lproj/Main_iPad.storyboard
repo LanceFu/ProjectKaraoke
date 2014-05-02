@@ -130,7 +130,22 @@
             </objects>
             <point key="canvasLocation" x="1951" y="21"/>
         </scene>
-        <!--Record View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="f9G-7f-903">
+            <objects>
+                <navigationController storyboardIdentifier="RecordNavigationController" definesPresentationContext="YES" id="Ekh-w4-r5e" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nFW-Cn-Fak">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ytX-iX-cZd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OL0-TY-hLl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3908" y="21"/>
+        </scene>
+        <!--Record View Controller - Record-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="RecordViewController" id="BYZ-38-t0r" customClass="RecordViewController" sceneMemberID="viewController">
@@ -143,7 +158,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SA7-KJ-vj8" customClass="EZAudioPlotGL">
-                                <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
+                                <rect key="frame" x="0.0" y="64" width="768" height="960"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
@@ -159,7 +174,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="recordingAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aVf-gk-ySB"/>
+                                    <action selector="recordAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cJE-vf-owj"/>
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eh5-zc-yIt">
@@ -189,16 +204,30 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="SA7-KJ-vj8" secondAttribute="bottom" id="qXR-ak-5MQ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Hxs-WL-mAn"/>
+                    <navigationItem key="navigationItem" title="Record" id="Hxs-WL-mAn">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="VQn-OJ-8Le">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="xcw-34-PBk">
+                                <rect key="frame" x="722" y="7" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="upload_icon.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="uploadAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fw5-5M-bgu"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="audioPlot" destination="SA7-KJ-vj8" id="kH1-BL-eWN"/>
                         <outlet property="playButton" destination="Eh5-zc-yIt" id="Wy4-3M-MrB"/>
                         <outlet property="recordButton" destination="tBp-RG-wmf" id="scJ-US-RaW"/>
+                        <outlet property="uploadButton" destination="xcw-34-PBk" id="CU4-0q-amH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3970" y="22"/>
+            <point key="canvasLocation" x="4834" y="22"/>
         </scene>
     </scenes>
     <resources>
@@ -206,6 +235,7 @@
         <image name="logout_icon.png" width="30" height="30"/>
         <image name="play_icon.png" width="125" height="125"/>
         <image name="record_icon.png" width="30" height="30"/>
+        <image name="upload_icon.png" width="30" height="30"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

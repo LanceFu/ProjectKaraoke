@@ -33,8 +33,8 @@
 
 - (IBAction)recordAction:(id)sender {
     if ([SCSoundCloud account]) {
-        RecordViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"RecordViewController"];
-        [self.navigationController pushViewController:controller animated:YES];
+        UINavigationController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"RecordNavigationController"];
+        [self.navigationController presentViewController:controller animated:YES completion:nil];
     }
     else {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:@"SoundCloud account is required to use our record feature. Would you like to log in?" delegate:self cancelButtonTitle:@"No" otherButtonTitles:@"Yes", nil];
@@ -84,7 +84,8 @@
                                                                 loginViewController.view.frame.origin.y + 20,
                                                                 controller.view.frame.size.width,
                                                                 controller.view.frame.size.height - 20);
-                } else {
+                }
+                else {
                     loginViewController.view.frame = CGRectMake(loginViewController.view.frame.origin.x,
                                                                 loginViewController.view.frame.origin.y,
                                                                 controller.view.frame.size.width,

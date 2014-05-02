@@ -14,6 +14,7 @@
 
 @property (strong, nonatomic) IBOutlet UIButton *recordButton;
 @property (strong, nonatomic) IBOutlet UIButton *playButton;
+@property (strong, nonatomic) IBOutlet UIButton *uploadButton;
 
 @property (readonly, nonatomic) AEAudioController *audioController;
 @property (strong, nonatomic) AEAudioFilePlayer *audioSourceFilePlayer;
@@ -36,6 +37,7 @@
     self.recordButton.layer.cornerRadius = 8.0f;
     self.recordButton.layer.borderWidth = 1.0f;
     self.recordButton.layer.borderColor = [UIColor lightGrayColor].CGColor;
+    self.uploadButton.hidden = YES;
     
     // Customize Waveform
     self.audioPlot.color = [UIColor colorWithRed:(252.0/255.0) green:(175.0/255.0) blue:(62.0/255.0) alpha:1.0];
@@ -130,13 +132,54 @@
 
 #pragma mark - Private Methods
 
-- (IBAction)recordingAction:(id)sender {
+- (IBAction)recordAction:(id)sender {
     if (!self.recorder) {
         [self startRecording];
     }
     else {
         [self endRecording];
     }
+}
+
+
+- (IBAction)uploadAction:(id)sender {
+    NSString *documentsFolder = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSURL *trackURL = [NSURL fileURLWithPath:[documentsFolder stringByAppendingPathComponent:@"Recording.aiff"]];
+    
+    SCSharingViewControllerCompletionHandler handler = ^(NSDictionary *trackInfo, NSError *error) {
+        if (SC_CANCELED(error)) {
+            NSLog(@"Canceled!");
+        } else if (error) {
+            NSLog(@"Error: %@", [error localizedDescription]);
+        } else {
+            NSLog(@"Uploaded track: %@", trackInfo);
+        }
+    };
+    
+    SCShareViewController *shareViewController = [SCShareViewController
+                                                  shareViewControllerWithFileURL:trackURL
+                                                  completionHandler:handler];
+    [shareViewController setTitle:@"Test Recording"];
+    [shareViewController setPrivate:YES];
+    
+    // TODO: Remove this workaround once SoundCloud fix it
+    UIViewController *controller = [[UIViewController alloc] init];
+    [controller addChildViewController:shareViewController];
+    controller.view.backgroundColor = self.view.backgroundColor;
+    if (floor(NSFoundationVersionNumber) > NSFoundationVersionNumber_iOS_6_1) {
+        shareViewController.view.frame = CGRectMake(shareViewController.view.frame.origin.x,
+                                                    shareViewController.view.frame.origin.y + 20,
+                                                    controller.view.frame.size.width,
+                                                    controller.view.frame.size.height - 20);
+    }
+    else {
+        shareViewController.view.frame = CGRectMake(shareViewController.view.frame.origin.x,
+                                                    shareViewController.view.frame.origin.y,
+                                                    controller.view.frame.size.width,
+                                                    controller.view.frame.size.height);
+    }
+    [controller.view addSubview:shareViewController.view];
+    [self.navigationController presentViewController:controller animated:YES completion:nil];
 }
 
 
@@ -152,7 +195,7 @@
     }
     if (!self.audioSourceFilePlayer) {
         // Read the file from within project
-        NSURL *filePath = [[NSBundle mainBundle] URLForResource: @"test" withExtension: @"wav"];
+        NSURL *filePath = [[NSBundle mainBundle] URLForResource:@"test" withExtension:@"wav"];
         self.audioSourceFilePlayer = [AEAudioFilePlayer audioFilePlayerWithURL:filePath audioController:self.audioController error:NULL];
         __weak RecordViewController *weakSelf = self;
         self.audioSourceFilePlayer.completionBlock = ^{
@@ -190,6 +233,7 @@
     [self.audioController removeOutputReceiver:self.audioReceiver];
     [self.recorder finishRecording];
     
+    self.uploadButton.hidden = NO;
     self.recorder = nil;
     self.audioSourceFilePlayer = nil;
 }
